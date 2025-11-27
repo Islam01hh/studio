@@ -32,6 +32,7 @@ export default function Footer() {
               <li><Link href="#attractions" className="hover:text-white transition-colors">Достопримечательности</Link></li>
               <li><Link href="#routes" className="hover:text-white transition-colors">Маршруты</Link></li>
               <li><Link href="#hotels" className="hover:text-white transition-colors">Отели</Link></li>
+              <li><Link href="#ai-guide" className="hover:text-white transition-colors">AI-гид</Link></li>
               <li><Link href="#gallery" className="hover:text-white transition-colors">Галерея</Link></li>
             </ul>
           </div>

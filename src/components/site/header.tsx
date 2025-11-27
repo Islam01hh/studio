@@ -12,6 +12,7 @@ const navItems = [
   { href: '#culture', label: 'Культура' },
   { href: '#routes', label: 'Маршруты' },
   { href: '#hotels', label: 'Отели' },
+  { href: '#ai-guide', label: 'AI-гид' },
   { href: '#gallery', label: 'Галерея' },
   { href: '#contact', label: 'Контакты' },
 ];
