@@ -3,116 +3,170 @@
     {
       "id": "hero",
       "description": "Hero background image of Adygea mountains",
-      "imageUrl": "https://images.unsplash.com/photo-1732239550454-76d971bd98bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbnMlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY0MjcxNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mountains landscape"
+      "imageUrl": "https://images.unsplash.com/photo-1597521193393-d232eb9491c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxDYXVjYXN1cyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQyNzE1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1920",
+      "imageHint": "Caucasus mountains"
     },
     {
       "id": "adygea-map",
-      "description": "Map of Adygea region",
-      "imageUrl": "https://images.unsplash.com/photo-1760630857189-edf81b2c2a80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXAlMjB2aW50YWdlfGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "map vintage"
+      "description": "Stylized map of Adygea region",
+      "imageUrl": "https://images.unsplash.com/photo-1543353403-628063a39b34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvbGQlMjBtYXAlMjBvZiUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQyNzE1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "old map"
     },
     {
       "id": "plato-lagonaki",
       "description": "Lago-Naki plateau",
-      "imageUrl": "https://images.unsplash.com/photo-1554933114-892f04fa24cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwbGF0ZWF1JTIwbW91bnRhaW5zfGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616039138441-2679cb48a8d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxMYWdvLU5ha2klMjBwbGF0ZWF1fGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "plateau mountains"
     },
     {
       "id": "rufabgo-waterfalls",
       "description": "Rufabgo waterfalls",
-      "imageUrl": "https://images.unsplash.com/photo-1677475439133-812e5596532e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3YXRlcmZhbGwlMjBmb3Jlc3R8ZW58MHx8fHwxNzY0MTgyNjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1500332847952-3de0033c7015?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3YXRlcmZhbGwlMjBmb3Jlc3QlMjBDYXVjYXN1c3xlbnwwfHx8fDE3NjQxODI2NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "waterfall forest"
     },
     {
-      "id": "kazachiy-kamen",
-      "description": "Cossack stone",
-      "imageUrl": "https://images.unsplash.com/photo-1567710127256-1be98eed34a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb2NrJTIwdmFsbGV5fGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "rock valley"
+      "id": "khadzhokh-gorge",
+      "description": "Khadzhokh Gorge",
+      "imageUrl": "https://images.unsplash.com/photo-1579930335293-6c8a0a00c655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "rocky gorge"
     },
     {
       "id": "granite-canyon",
       "description": "Granite canyon",
-      "imageUrl": "https://images.unsplash.com/photo-1729844765652-77762c1a8cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYW55b24lMjByaXZlcnxlbnwwfHx8fDE3NjQyNTEyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1622383289873-a496a394334f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHcmFuaXRlJTIwY2FueW9uJTIwQWR5Z2VhJTIwUml2ZXJ8ZW58MHx8fHwxNzY0MjUxMjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "canyon river"
     },
     {
       "id": "maykop",
-      "description": "Maykop city",
-      "imageUrl": "https://images.unsplash.com/photo-1642287040066-2bd340523289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2l0eSUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3NjQyNDg2NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "city architecture"
+      "description": "Maykop city central mosque",
+      "imageUrl": "https://images.unsplash.com/photo-1620023612588-4db81d68c2be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNYXlrb3AlMjBtb3NxdWV8ZW58MHx8fHwxNzY0MjQ4NjQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city mosque"
     },
     {
       "id": "mishoko-canyon",
       "description": "Mishoko canyon",
-      "imageUrl": "https://images.unsplash.com/photo-1622927553665-c078636c77b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYW55b24lMjBnb3JnZXxlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1632952809265-2d936166164a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
       "imageHint": "canyon gorge"
     },
     {
-      "id": "route-lagonaki",
-      "description": "Hiking route to Lago-Naki",
-      "imageUrl": "https://images.unsplash.com/photo-1621960531176-9e4894d9adf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoaWtpbmclMjB0cmFpbHxlbnwwfHx8fDE3NjQxOTMyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "hiking trail"
+      "id": "guzeripl",
+      "description": "Village Guzeripl",
+      "imageUrl": "https://images.unsplash.com/photo-1617364973307-950d8a5f8b9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "mountain village"
     },
     {
-      "id": "route-rufabgo",
+      "id": "svyato-mihaylovskiy-monastery",
+      "description": "St. Michael's Monastery",
+      "imageUrl": "https://images.unsplash.com/photo-1589656914093-686419b856e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "orthodox monastery"
+    },
+    {
+      "id": "route-lagonaki-hiking",
+      "description": "Hiking route to Lago-Naki",
+      "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaWtpbmclMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQxOTMyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hiking caucasus"
+    },
+    {
+      "id": "route-rufabgo-hiking",
       "description": "Hiking route to Rufabgo waterfalls",
-      "imageUrl": "https://images.unsplash.com/photo-1531756716853-09a60d38d820?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmb3Jlc3QlMjBwYXRofGVufDB8fHx8MTc2NDIwNzA1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1542382257-80ded54c0416?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjBwYXRoJTIwd2F0ZXJmYWxsfGVufDB8fHx8MTc2NDIwNzA1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "forest path"
     },
     {
-      "id": "route-auto",
+      "id": "route-auto-ring",
       "description": "Car route through Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1478059299873-f047d8c5fe1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwbW91bnRhaW5zfGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "road mountains"
+      "imageUrl": "https://images.unsplash.com/photo-1568662325984-729019aa5179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwdHJpcCUyMGNhdWNhc3VzfGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "road trip"
     },
     {
-      "id": "route-family",
+      "id": "route-auto-guamka",
+      "description": "Guamka gorge railway",
+      "imageUrl": "https://images.unsplash.com/photo-1633324661846-54a72851413a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "mountain railway"
+    },
+    {
+      "id": "route-family-adventure",
       "description": "Family friendly route",
-      "imageUrl": "https://images.unsplash.com/photo-1611708314849-8bb91fe0fa56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYW1pbHklMjBuYXR1cmV8ZW58MHx8fHwxNzY0MjcxMDMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "family nature"
+      "imageUrl": "https://images.unsplash.com/photo-1527513364923-a075390069c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBoaWtpbmclMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzEwMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "family hiking"
     },
     {
-      "id": "route-extreme",
-      "description": "Extreme hiking route",
-      "imageUrl": "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb3VudGFpbiUyMGNsaW1iaW5nfGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "route-dolmens-and-legends",
+      "description": "Ancient dolmens",
+      "imageUrl": "https://images.unsplash.com/photo-1601607598687-94362145899b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "ancient dolmen"
+    },
+    {
+      "id": "route-canyoning",
+      "description": "Canyoning adventure",
+      "imageUrl": "https://images.unsplash.com/photo-1593414923133-144eba2f65a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "canyoning adventure"
+    },
+    {
+      "id": "route-fisht-climbing",
+      "description": "Climbing Mount Fisht",
+      "imageUrl": "https://images.unsplash.com/photo-1589593438342-925345ba5d16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGNsaW1iaW5nJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0Mjc4NTUyfDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "mountain climbing"
+    },
+    {
+      "id": "hotel-lagonaki",
+      "description": "Hotel in Lagonaki",
+      "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "mountain hotel"
+    },
+    {
+      "id": "hotel-guzeripl",
+      "description": "Guesthouse in Guzeripl",
+      "imageUrl": "https://images.unsplash.com/photo-1582582494705-53753b VnVlc3Rob3VzZSUyMGluJTIwZ3V6ZXJpcGwl&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "cozy guesthouse"
+    },
+    {
+      "id": "hotel-maykop",
+      "description": "Hotel in Maykop",
+      "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "city hotel"
+    },
+    {
+      "id": "hotel-khadzhokh",
+      "description": "Spa hotel near Khadzhokh",
+      "imageUrl": "https://images.unsplash.com/photo-1615880484734-04533857fabf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "spa resort"
     },
     {
       "id": "gallery-1",
       "description": "Nature of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1621846846625-f0bde2eb7c3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuYXR1cmUlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY0MTYzNzc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYXVjYXN1cyUyMG5hdHVyZXxlbnwwfHx8fDE3NjQxNjM3Nzh8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "nature landscape"
     },
     {
       "id": "gallery-2",
       "description": "Culture of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1763733593136-dabad3997842?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjdWx0dXJlJTIwdHJhZGl0aW9ufGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "culture tradition"
+      "imageUrl": "https://images.unsplash.com/photo-1533109721025-d1ae7ee7144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2xrJTIwZGFuY2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "folk dance"
     },
     {
       "id": "gallery-3",
       "description": "Architecture of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1756227584303-f1400daaa69d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcmNoaXRlY3R1cmUlMjBidWlsZGluZ3xlbnwwfHx8fDE3NjQyMjA2MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "architecture building"
+      "imageUrl": "https://images.unsplash.com/photo-1598463595999-9892a3439162?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbGQlMjBidWlsZGluZyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQyMjA2MDl8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "old building"
     },
     {
       "id": "gallery-4",
       "description": "Mountains of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1641198577715-a0673cadde56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtb3VudGFpbnMlMjBzbm93fGVufDB8fHx8MTc2NDI0MjI3MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mountains snow"
+      "imageUrl": "https://images.unsplash.com/photo-1589332159677-1335414d44bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXVjYXN1cyUyMG1vdW50YWlucyUyMHN1bW1lcnxlbnwwfHx8fDE3NjQyNDIyNzF8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "mountains summer"
     },
     {
       "id": "gallery-5",
-      "description": "Traditions of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1650709244902-04b47a4b4f76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb2xrJTIwZGFuY2V8ZW58MHx8fHwxNzY0MjMxNjQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "folk dance"
+      "description": "Adyghe cheese",
+      "imageUrl": "https://images.unsplash.com/photo-1628042413341-426783893918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob21lbWFkZSUyMGNoZWVzZXxlbnwwfHx8fDE3NjQyMzE2NDZ8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "homemade cheese"
     },
     {
       "id": "gallery-6",
-      "description": "Waterfalls of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1661584690031-7b74b1a67909?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3YXRlcmZhbGwlMjByb2Nrc3xlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "waterfall rocks"
+      "description": "River in Adygea",
+      "imageUrl": "https://images.unsplash.com/photo-1616413949390-3a4441355b41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHJpdmVyJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0Mjc4NTUyfDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain river"
     }
   ]
 }

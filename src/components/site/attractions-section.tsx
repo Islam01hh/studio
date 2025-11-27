@@ -1,44 +1,64 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Maximize } from 'lucide-react';
 import AnimateOnScroll from './animate-on-scroll';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 
 const attractions = [
   {
     id: 'plato-lagonaki',
     title: 'Плато Лагонаки',
-    description: 'Высокогорное плато с альпийскими лугами',
+    description: 'Высокогорное плато с альпийскими лугами, часть Кавказского заповедника. Уникальная флора и фауна, карстовые пещеры и панорамные виды.',
   },
   {
     id: 'rufabgo-waterfalls',
     title: 'Водопады Руфабго',
-    description: 'Каскад из 16 живописных водопадов',
+    description: 'Каскад из 16 живописных водопадов в ущелье реки Руфабго, оборудованная тропа для туристов.',
   },
   {
-    id: 'kazachiy-kamen',
-    title: 'Казачий камень',
-    description: 'Легендарная скала с панорамными видами',
+    id: 'khadzhokh-gorge',
+    title: 'Хаджохская теснина',
+    description: 'Узкий и глубокий каньон реки Белой с бурным потоком воды, оборудованный для посещения.',
   },
   {
     id: 'granite-canyon',
     title: 'Гранитный каньон',
-    description: 'Уникальное геологическое образование',
+    description: 'Уникальное геологическое образование, где река Белая пробила себе путь сквозь гранитный массив.',
   },
   {
     id: 'maykop',
     title: 'Майкоп',
-    description: 'Столица республики с богатой историей',
+    description: 'Столица республики с богатой историей, парками, музеями и знаменитым пивоваренным заводом.',
   },
   {
     id: 'mishoko-canyon',
     title: 'Каньон Мишоко',
-    description: 'Живописное ущелье с изумрудной водой',
+    description: 'Живописное ущелье с изумрудной водой, экстремальным парком и древними стоянками человека.',
   },
+  {
+      id: 'guzeripl',
+      title: 'Поселок Гузерипль',
+      description: 'Ворота в Кавказский заповедник, здесь находится самый большой дольмен в Адыгее и музей природы.',
+  },
+  {
+      id: 'svyato-mihaylovskiy-monastery',
+      title: 'Свято-Михайловский монастырь',
+      description: 'Крупнейший мужской монастырь на юге России с подземными ходами и святым источником.'
+  }
 ];
 
 export default function AttractionsSection() {
+    const [selectedAttraction, setSelectedAttraction] = useState<{title: string, description: string, image: ImagePlaceholder | undefined} | null>(null);
+
+    const openModal = (attraction: typeof attractions[0]) => {
+        const image = PlaceHolderImages.find((img) => img.id === attraction.id);
+        setSelectedAttraction({ ...attraction, image });
+    }
+
   return (
     <section id="attractions" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -47,12 +67,12 @@ export default function AttractionsSection() {
             Главные достопримечательности
             </h2>
         </AnimateOnScroll>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {attractions.map((attraction, index) => {
             const image = PlaceHolderImages.find((img) => img.id === attraction.id);
             return (
               <AnimateOnScroll key={attraction.id} delay={index * 0.1}>
-                <div className="group relative overflow-hidden rounded-lg shadow-lg h-80">
+                <div className="group relative overflow-hidden rounded-lg shadow-lg h-96" onClick={() => openModal(attraction)}>
                   {image && (
                     <Image
                       src={image.imageUrl}
@@ -62,21 +82,50 @@ export default function AttractionsSection() {
                       data-ai-hint={image.imageHint}
                     />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                   <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                     <h3 className="font-headline text-2xl font-bold">{attraction.title}</h3>
-                    <p className="mt-1 text-white/90">{attraction.description}</p>
-                    <Button asChild variant="secondary" className="mt-4 w-fit transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
-                      <Link href="#">
-                        Подробнее <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+                    <p className="mt-1 text-white/90 text-sm line-clamp-2">{attraction.description}</p>
+                     <div className="mt-4 flex justify-between items-center">
+                        <p className="text-sm font-semibold">Подробнее</p>
+                        <Maximize className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
                   </div>
                 </div>
               </AnimateOnScroll>
             );
           })}
         </div>
+
+        <Dialog open={!!selectedAttraction} onOpenChange={(isOpen) => !isOpen && setSelectedAttraction(null)}>
+            <DialogContent className="max-w-3xl">
+                {selectedAttraction && (
+                    <>
+                        <DialogHeader>
+                            <DialogTitle className="font-headline text-3xl text-primary">{selectedAttraction.title}</DialogTitle>
+                        </DialogHeader>
+                        <div className="grid md:grid-cols-2 gap-6 mt-4">
+                            {selectedAttraction.image && (
+                                <div className="relative aspect-square rounded-lg overflow-hidden">
+                                <Image
+                                    src={selectedAttraction.image.imageUrl}
+                                    alt={selectedAttraction.image.description}
+                                    fill
+                                    className="object-cover"
+                                />
+                                </div>
+                            )}
+                            <div className="flex flex-col justify-center">
+                                <DialogDescription className="text-base leading-relaxed text-foreground">
+                                    {selectedAttraction.description}
+                                </DialogDescription>
+                            </div>
+                        </div>
+                    </>
+                )}
+            </DialogContent>
+        </Dialog>
+
       </div>
     </section>
   );

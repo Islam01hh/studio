@@ -11,6 +11,7 @@ const navItems = [
   { href: '#attractions', label: 'Достопримечательности' },
   { href: '#culture', label: 'Культура' },
   { href: '#routes', label: 'Маршруты' },
+  { href: '#hotels', label: 'Отели' },
   { href: '#gallery', label: 'Галерея' },
   { href: '#contact', label: 'Контакты' },
 ];
@@ -18,11 +19,26 @@ const navItems = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('#home');
+
 
   useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 50);
+
+      const sections = navItems.map(item => document.querySelector(item.href));
+      const scrollPosition = window.scrollY + 150;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+          const section = sections[i];
+          if (section && (section as HTMLElement).offsetTop <= scrollPosition) {
+              setActiveSection(navItems[i].href);
+              break;
+          }
+      }
     };
+
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -43,12 +59,16 @@ export default function Header() {
             <span className="font-headline">Адыгея</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                onClick={() => setActiveSection(item.href)}
+                className={cn(
+                    "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent/50 hover:text-primary",
+                    activeSection === item.href ? 'text-primary font-semibold' : 'text-foreground/80'
+                )}
               >
                 {item.label}
               </Link>

@@ -18,7 +18,7 @@ export default function HeroSection() {
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent" />
       
       <div className="relative z-10 flex flex-col items-center px-4">
         <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold drop-shadow-lg animate-fade-in-up [animation-delay:200ms]">
@@ -34,13 +34,13 @@ export default function HeroSection() {
           <Button asChild size="lg" className="font-semibold">
             <Link href="#attractions">Исследовать</Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary font-semibold">
-            <Link href="#routes">Планировать поездку</Link>
+          <Button asChild size="lg" variant="secondary">
+            <Link href="#routes">Подобрать тур</Link>
           </Button>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-fade-in-up [animation-delay:1000ms]">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2">
             <div className="w-1 h-2 bg-white rounded-full animate-mouse-wheel"></div>
         </div>

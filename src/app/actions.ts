@@ -35,7 +35,8 @@ export async function submitContactForm(prevState: any, formData: FormData) {
 
 // Schema for the booking form
 const bookingSchema = z.object({
-    route: z.string({ required_error: 'Пожалуйста, выберите маршрут.' }),
+    bookingType: z.string(),
+    bookingName: z.string(),
     travelDate: z.string().min(1, 'Пожалуйста, выберите дату.'),
     personCount: z.coerce.number().min(1, 'Минимум 1 человек.'),
     name: z.string().min(2, 'Имя должно быть не менее 2 символов.'),
@@ -49,6 +50,7 @@ export async function submitBookingForm(prevState: any, formData: FormData) {
   const validatedFields = bookingSchema.safeParse(Object.fromEntries(formData.entries()));
 
   if (!validatedFields.success) {
+    console.log(validatedFields.error.flatten().fieldErrors)
     return {
       success: false,
       message: 'Пожалуйста, исправьте ошибки и попробуйте снова.',
@@ -62,6 +64,6 @@ export async function submitBookingForm(prevState: any, formData: FormData) {
 
   return {
     success: true,
-    message: 'Ваша заявка на бронирование принята! Мы скоро с вами свяжемся.',
+    message: `Ваша заявка на бронирование "${validatedFields.data.bookingName}" принята! Мы скоро с вами свяжемся.`,
   };
 }

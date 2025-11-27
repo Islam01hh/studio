@@ -12,7 +12,7 @@ const socialLinks = [
 export default function Footer() {
     const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-primary/90 text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
@@ -31,6 +31,7 @@ export default function Footer() {
               <li><Link href="#home" className="hover:text-white transition-colors">Главная</Link></li>
               <li><Link href="#attractions" className="hover:text-white transition-colors">Достопримечательности</Link></li>
               <li><Link href="#routes" className="hover:text-white transition-colors">Маршруты</Link></li>
+              <li><Link href="#hotels" className="hover:text-white transition-colors">Отели</Link></li>
               <li><Link href="#gallery" className="hover:text-white transition-colors">Галерея</Link></li>
             </ul>
           </div>
