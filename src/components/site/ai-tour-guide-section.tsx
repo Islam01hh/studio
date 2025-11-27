@@ -1,7 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,25 +16,20 @@ type AITourGuideState = {
 const initialState: AITourGuideState = {};
 
 export default function AiTourGuideSection() {
-  const [state, formAction] = useFormState(aiTourGuideAction, initialState);
-  const [pending, setPending] = useState(false);
+  const [state, formAction, pending] = useActionState(aiTourGuideAction, initialState);
 
   async function aiTourGuideAction(
     prevState: AITourGuideState,
     formData: FormData
   ): Promise<AITourGuideState> {
-    setPending(true);
     const location = formData.get('location') as string;
     if (!location) {
-      setPending(false);
       return { error: 'Пожалуйста, введите название локации.' };
     }
     try {
       const result = await provideAITourGuide({ location });
-      setPending(false);
       return { insight: result.insight };
     } catch (e) {
-      setPending(false);
       return { error: 'Не удалось получить информацию. Попробуйте еще раз.' };
     }
   }

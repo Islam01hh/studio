@@ -1,10 +1,9 @@
 'use client';
 
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { useEffect } from 'react';
 
 import { submitBookingForm } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
@@ -42,7 +41,7 @@ type BookingFormValues = z.infer<typeof bookingSchema>;
 
 export default function BookingForm({ routeOptions }: { routeOptions: { value: string; label: string }[] }) {
   const { toast } = useToast();
-  const [state, formAction] = useFormState(submitBookingForm, null);
+  const [state, formAction] = useActionState(submitBookingForm, null);
 
   const form = useForm<BookingFormValues>({
     resolver: zodResolver(bookingSchema),
