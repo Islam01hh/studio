@@ -12,7 +12,6 @@ const navItems = [
   { href: '#culture', label: 'Культура' },
   { href: '#routes', label: 'Маршруты' },
   { href: '#hotels', label: 'Отели' },
-  { href: '#ai-guide', label: 'AI-гид' },
   { href: '#gallery', label: 'Галерея' },
   { href: '#contact', label: 'Контакты' },
 ];
@@ -94,7 +93,7 @@ export default function Header() {
           <div className="flex justify-between items-center mb-8">
             <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
                 <Compass className="h-6 w-6" />
-                <span className="font-headline">Сердце Кавказа</span>
+                <span className="font-headline">Сердce Кавказа</span>
             </Link>
             <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                 <X className="h-6 w-6" />
