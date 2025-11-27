@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Clock, Mountain, RulerHorizontal, Car,Users, Zap } from 'lucide-react';
+import { Clock, Mountain, Ruler, Car,Users, Zap } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import AnimateOnScroll from './animate-on-scroll';
@@ -140,7 +140,7 @@ function RoutesGrid({ routes }: { routes: typeof routesData.hiking }) {
                                 <div className="text-sm space-y-2 text-foreground/80">
                                     <div className="flex items-center"><Clock className="w-4 h-4 mr-2 text-primary" />{route.duration}</div>
                                     <div className="flex items-center"><Mountain className="w-4 h-4 mr-2 text-primary" />Сложность: {route.difficulty}</div>
-                                    <div className="flex items-center"><RulerHorizontal className="w-4 h-4 mr-2 text-primary" />{route.distance}</div>
+                                    <div className="flex items-center"><Ruler className="w-4 h-4 mr-2 text-primary" />{route.distance}</div>
                                 </div>
                             </div>
                         </div>
