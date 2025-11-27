@@ -13,12 +13,6 @@ export default function AITourGuideSection() {
   const [location, setLocation] = useState('');
   const [state, formAction, isPending] = useActionState(provideAITourGuide, null);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    formAction(formData);
-  };
-
   return (
     <section id="ai-guide" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -36,7 +30,7 @@ export default function AITourGuideSection() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form action={formAction} className="space-y-4">
                 <Textarea
                   name="location"
                   placeholder="Например, 'Плато Лаго-Наки' или 'Хаджохская теснина'"
@@ -66,12 +60,14 @@ export default function AITourGuideSection() {
                         </AlertDescription>
                     </Alert>
                   ) : (
-                    <Alert variant="destructive">
-                      <AlertTitle>Произошла ошибка</AlertTitle>
-                      <AlertDescription>
-                        Не удалось получить ответ от AI-гида. Пожалуйста, попробуйте еще раз.
-                      </AlertDescription>
-                    </Alert>
+                    !isPending && (
+                        <Alert variant="destructive">
+                        <AlertTitle>Произошла ошибка</AlertTitle>
+                        <AlertDescription>
+                            Не удалось получить ответ от AI-гида. Пожалуйста, попробуйте еще раз.
+                        </AlertDescription>
+                        </Alert>
+                    )
                   )}
                 </div>
               )}
