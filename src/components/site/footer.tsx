@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MountainIcon, Phone, Mail } from 'lucide-react';
+import { Compass, Phone, Mail } from 'lucide-react';
 import { FaVk, FaTelegram, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const socialLinks = [
@@ -17,8 +17,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-              <MountainIcon className="h-6 w-6" />
-              <span className="font-headline">Адыгея Туризм</span>
+              <Compass className="h-6 w-6" />
+              <span className="font-headline">Сердце Кавказа</span>
             </Link>
             <p className="text-primary-foreground/80">
               Откройте для себя красоту Республики Адыгея
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
         
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60 text-sm">
-          <p>&copy; {currentYear} Путеводитель по Адыгее. Все права защищены.</p>
+          <p>&copy; {currentYear} Сердце Кавказа: Путеводитель по Адыгее. Все права защищены.</p>
         </div>
       </div>
     </footer>

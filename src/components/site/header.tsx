@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { MountainIcon, Menu, X } from 'lucide-react';
+import { Compass, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -55,8 +55,8 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
-            <MountainIcon className="h-6 w-6" />
-            <span className="font-headline">Адыгея</span>
+            <Compass className="h-6 w-6" />
+            <span className="font-headline">Сердце Кавказа</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
@@ -92,8 +92,8 @@ export default function Header() {
         <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-background p-4">
           <div className="flex justify-between items-center mb-8">
             <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
-                <MountainIcon className="h-6 w-6" />
-                <span className="font-headline">Адыгея</span>
+                <Compass className="h-6 w-6" />
+                <span className="font-headline">Сердце Кавказа</span>
             </Link>
             <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                 <X className="h-6 w-6" />

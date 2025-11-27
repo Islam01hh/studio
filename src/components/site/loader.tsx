@@ -1,6 +1,6 @@
 'use client';
 
-import { MountainIcon } from 'lucide-react';
+import { Compass } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 type LoaderProps = {
@@ -15,11 +15,12 @@ export default function Loader({ loading }: LoaderProps) {
         loading ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
     >
-      <div className="text-center">
-        <MountainIcon className="mx-auto h-16 w-16 animate-mountain-pulse" />
-        <div className="mt-4 font-headline text-2xl">
-          Добро пожаловать в Адыгею
+      <div className="text-center animate-fade-in-up">
+        <Compass className="mx-auto h-16 w-16 animate-spin-slow" />
+        <div className="mt-4 font-headline text-2xl tracking-widest">
+          СЕРДЦЕ КАВКАЗА
         </div>
+        <p className="text-sm text-primary-foreground/80">Загрузка...</p>
       </div>
     </div>
   );

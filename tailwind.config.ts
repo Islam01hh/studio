@@ -108,13 +108,9 @@ export default {
             opacity: '0',
           },
         },
-        'mountain-pulse': {
-          '0%, 100%': {
-            transform: 'scale(1)',
-          },
-          '50%': {
-            transform: 'scale(1.1)',
-          },
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
       animation: {
@@ -122,7 +118,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
         'mouse-wheel': 'mouse-wheel 2s ease-out infinite',
-        'mountain-pulse': 'mountain-pulse 2s infinite',
+        'spin-slow': 'spin-slow 3s linear infinite',
       },
     },
   },
