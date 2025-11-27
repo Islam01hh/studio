@@ -34,6 +34,7 @@ export async function provideAITourGuide(input: AITourGuideInput): Promise<AITou
 
 const aiTourGuidePrompt = ai.definePrompt({
   name: 'aiTourGuidePrompt',
+  model: 'googleai/gemini-1.5-flash',
   input: {schema: AITourGuideInputSchema},
   output: {schema: AITourGuideOutputSchema},
   prompt: `You are an expert tour guide for the Republic of Adygea, Russia. Your tone is friendly, engaging, and knowledgeable.
