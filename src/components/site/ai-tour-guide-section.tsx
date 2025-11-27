@@ -1,6 +1,6 @@
 'use client';
 
-import { useActionState, useState } from 'react';
+import { useActionState, useState, useTransition } from 'react';
 import { provideAITourGuide } from '@/ai/flows/ai-tour-guide';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -11,7 +11,31 @@ import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
 
 export default function AITourGuideSection() {
   const [location, setLocation] = useState('');
-  const [state, formAction, isPending] = useActionState(provideAITourGuide, null);
+  const [state, setState] = useState<{insight: string} | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const locationValue = formData.get('location') as string;
+
+    if (!locationValue.trim()) {
+      return;
+    }
+    
+    startTransition(async () => {
+      try {
+        setError(null);
+        const result = await provideAITourGuide({ location: locationValue });
+        setState(result);
+      } catch (e) {
+        console.error(e);
+        setError('Не удалось получить ответ от AI-гида. Пожалуйста, попробуйте еще раз.');
+        setState(null);
+      }
+    });
+  };
 
   return (
     <section id="ai-guide" className="py-16 md:py-24">
@@ -30,7 +54,7 @@ export default function AITourGuideSection() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form action={formAction} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <Textarea
                   name="location"
                   placeholder="Например, 'Плато Лаго-Наки' или 'Хаджохская теснина'"
@@ -49,28 +73,25 @@ export default function AITourGuideSection() {
                 </Button>
               </form>
 
-              {state && (
-                <div className="mt-6">
-                  {state.insight ? (
-                     <Alert>
-                        <Sparkles className="h-4 w-4" />
-                        <AlertTitle className="font-headline text-primary">Вот что я знаю:</AlertTitle>
-                        <AlertDescription className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">
-                            {state.insight}
-                        </AlertDescription>
+              <div className="mt-6">
+                {state?.insight && (
+                   <Alert>
+                      <Sparkles className="h-4 w-4" />
+                      <AlertTitle className="font-headline text-primary">Вот что я знаю:</AlertTitle>
+                      <AlertDescription className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">
+                          {state.insight}
+                      </AlertDescription>
+                  </Alert>
+                )}
+                {error && (
+                    <Alert variant="destructive">
+                    <AlertTitle>Произошла ошибка</AlertTitle>
+                    <AlertDescription>
+                        {error}
+                    </AlertDescription>
                     </Alert>
-                  ) : (
-                    !isPending && (
-                        <Alert variant="destructive">
-                        <AlertTitle>Произошла ошибка</AlertTitle>
-                        <AlertDescription>
-                            Не удалось получить ответ от AI-гида. Пожалуйста, попробуйте еще раз.
-                        </AlertDescription>
-                        </Alert>
-                    )
-                  )}
-                </div>
-              )}
+                )}
+              </div>
             </CardContent>
           </Card>
         </AnimateOnScroll>
