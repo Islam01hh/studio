@@ -61,6 +61,30 @@
       "imageHint": "orthodox monastery"
     },
     {
+      "id": "adyghe-music",
+      "description": "Traditional Adyghe musical instruments",
+      "imageUrl": "https://images.unsplash.com/photo-1511192336575-5a79af1e9f29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzM3wwfDF8c2VhcmNofDE0fHxvbGQlMjBtdXNpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNjc3MjU1MDIyfDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "musical instruments"
+    },
+    {
+      "id": "adyghe-cuisine",
+      "description": "Adyghe cheese and traditional food",
+      "imageUrl": "https://images.unsplash.com/photo-1559922159-d3a919864d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzM3wwfDF8c2VhcmNofDEyfHx0cmFkaXRpb25hbCUyMGZvb2QlMjBjYXVjYXN1c3xlbnwwfHx8fDE2NzcyNTQ5NzJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "caucasus food"
+    },
+    {
+      "id": "adyghe-crafts",
+      "description": "Adyghe gold embroidery",
+      "imageUrl": "https://images.unsplash.com/photo-1618286846152-327e53f2c522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzM3wwfDF8c2VhcmNofDEwfHxnb2xkZW4lMjBlbWJyb2lkZXJ5fGVufDB8fHx8MTY3NzI1NDk5NXww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "gold embroidery"
+    },
+    {
+      "id": "adyghe-holidays",
+      "description": "Folk festival in the mountains",
+      "imageUrl": "https://images.unsplash.com/photo-1533109721025-d1ae7ee7144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2xrJTIwZGFuY2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "folk festival"
+    },
+    {
       "id": "route-lagonaki-hiking",
       "description": "Hiking route to Lago-Naki",
       "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaWtpbmclMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQxOTMyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
