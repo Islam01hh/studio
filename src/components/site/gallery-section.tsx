@@ -7,16 +7,23 @@ import { Button } from '@/components/ui/button';
 import AnimateOnScroll from './animate-on-scroll';
 import GalleryModal from './gallery-modal';
 import { cn } from '@/lib/utils';
+import { ZoomIn } from 'lucide-react';
 
-type Filter = 'all' | 'nature' | 'culture' | 'architecture';
+type Filter = 'all' | 'nature' | 'culture' | 'architecture' | 'food';
 
 const galleryItemsData = [
   { id: 'gallery-1', category: 'nature' },
   { id: 'gallery-2', category: 'culture' },
   { id: 'gallery-3', category: 'architecture' },
   { id: 'gallery-4', category: 'nature' },
-  { id: 'gallery-5', category: 'culture' },
+  { id: 'gallery-5', category: 'food' },
   { id: 'gallery-6', category: 'nature' },
+  { id: 'gallery-7', category: 'culture' },
+  { id: 'gallery-8', category: 'nature' },
+  { id: 'gallery-9', category: 'architecture' },
+  { id: 'gallery-10', category: 'food' },
+  { id: 'gallery-11', category: 'nature' },
+  { id: 'gallery-12', category: 'culture' },
 ];
 
 const filters: { value: Filter; label: string }[] = [
@@ -24,6 +31,7 @@ const filters: { value: Filter; label: string }[] = [
   { value: 'nature', label: 'Природа' },
   { value: 'culture', label: 'Культура' },
   { value: 'architecture', label: 'Архитектура' },
+  { value: 'food', label: 'Кухня' },
 ];
 
 export default function GallerySection() {
@@ -34,7 +42,7 @@ export default function GallerySection() {
   const galleryImages = galleryItemsData.map(item => {
       const imageData = PlaceHolderImages.find(p => p.id === item.id);
       return { ...item, ...imageData! };
-  });
+  }).filter(item => item.imageUrl); // Filter out items where image might be missing
 
   const filteredImages =
     filter === 'all'
@@ -72,7 +80,7 @@ export default function GallerySection() {
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredImages.map((item, index) => (
-            <AnimateOnScroll key={item.id} delay={index * 0.05} className={cn('aspect-square', item.category === 'architecture' && 'lg:col-span-2 lg:row-span-2 aspect-[2/1] lg:aspect-auto')}>
+            <AnimateOnScroll key={item.id} delay={index * 0.05} className="aspect-w-1 aspect-h-1">
               <div
                 className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-full w-full"
                 onClick={() => handleImageClick(item.id)}
@@ -87,7 +95,7 @@ export default function GallerySection() {
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="w-12 h-12 bg-primary/80 text-white rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/></svg>
+                    <ZoomIn className="w-6 h-6" />
                   </div>
                 </div>
               </div>

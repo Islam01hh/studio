@@ -36,10 +36,14 @@ const aiTourGuidePrompt = ai.definePrompt({
   name: 'aiTourGuidePrompt',
   input: {schema: AITourGuideInputSchema},
   output: {schema: AITourGuideOutputSchema},
-  prompt: `You are an AI tour guide providing insights for tourists visiting Adygea.
+  prompt: `You are an expert tour guide for the Republic of Adygea, Russia. Your tone is friendly, engaging, and knowledgeable.
 
-  Provide interesting information regarding the location provided. Include its history,
-  any local legends, and travel tips relevant to the location.
+  A user has asked for information about a specific location. Provide a concise but interesting overview covering the following points in Russian:
+  1.  **History:** A brief, compelling historical fact or summary.
+  2.  **Legend:** A local legend or myth associated with the place.
+  3.  **Travel Tip:** A practical and useful tip for visitors (e.g., best time to visit, what to wear, a must-try activity).
+
+  Format your response clearly. Use markdown for structure if needed.
 
   Location: {{{location}}}
   `,

@@ -28,15 +28,24 @@ const routesData = {
             title: 'К водопадам Руфабго',
             duration: '3-4 часа',
             difficulty: 'Легкая',
-            distance: '8 км',
+            distance: '6 км',
             price: 'от 1500 ₽/чел.',
-            description: 'Семейный маршрут к красивейшим водопадам с возможностью купания. Идеально для первого знакомства с природой Адыгеи.',
-        }
+            description: 'Семейный маршрут по оборудованной тропе к каскаду красивейших водопадов с возможностью купания.',
+        },
+         {
+            id: 'route-oshten-hiking',
+            title: 'Восхождение на Оштен',
+            duration: '2 дня',
+            difficulty: 'Высокая',
+            distance: '25 км',
+            price: 'от 9000 ₽/чел.',
+            description: 'Двухдневный поход с ночевкой в палатках и восхождением на одну из вершин Лагонакского нагорья (2804 м). Для подготовленных туристов.',
+        },
     ],
     auto: [
         {
             id: 'route-auto-ring',
-            title: 'Большое кольцо Адыгеi',
+            title: 'Большое кольцо Адыгеи',
             duration: '2-3 дня',
             difficulty: 'На автомобиле',
             distance: '350 км',
@@ -51,6 +60,15 @@ const routesData = {
             distance: '120 км',
             price: 'от 8000 ₽/машина',
             description: 'Поездка на ретро-поезде по узкоколейке, купание в термальных источниках и невероятные виды.',
+        },
+         {
+            id: 'route-auto-mountains',
+            title: 'Панорамный Джип-тур',
+            duration: '6-7 часов',
+            difficulty: 'На автомобиле',
+            distance: '80 км',
+            price: 'от 10000 ₽/машина',
+            description: 'Захватывающая поездка на джипах по самым живописным смотровым площадкам Лагонакского нагорья, недоступным для обычных машин.',
         }
     ],
     family: [
@@ -61,7 +79,7 @@ const routesData = {
             difficulty: 'Для всей семьи',
             distance: '~5 км',
             price: 'от 6000 ₽/семья',
-            description: 'Легкие прогулки по Хаджохской теснине, посещение парка и пикник с видом на горы.',
+            description: 'Легкие прогулки по Хаджохской теснине, посещение экстрим-парка "Мишоко" и пикник с видом на горы.',
         },
         {
             id: 'route-dolmens-and-legends',
@@ -71,6 +89,15 @@ const routesData = {
             distance: 'небольшие переезды',
             price: 'от 2000 ₽/чел.',
             description: 'Познавательная экскурсия к древним мегалитам, где вы узнаете тайны и легенды этих загадочных сооружений.',
+        },
+        {
+            id: 'route-hansk-park',
+            title: 'Прогулка по "Ханскому парку"',
+            duration: '3 часа',
+            difficulty: 'Очень легкая',
+            distance: '2-3 км',
+            price: 'от 1000 ₽/чел.',
+            description: 'Спокойная прогулка по дендрологическому парку с редкими растениями, озером и чистым воздухом. Отлично подходит для детей и пожилых людей.',
         }
     ],
     extreme: [
@@ -91,6 +118,15 @@ const routesData = {
             distance: '40 км',
             price: 'от 20000 ₽/чел.',
             description: 'Серьезный маршрут для опытных туристов с ночевками в палатках и штурмом одной из самых красивых вершин Кавказа.',
+        },
+        {
+            id: 'route-rafting',
+            title: 'Рафтинг по реке Белой',
+            duration: '2-3 часа',
+            difficulty: 'Средняя',
+            distance: '12 км',
+            price: 'от 2000 ₽/чел.',
+            description: 'Динамичный сплав по горной реке с прохождением порогов. Доступны маршруты разной сложности. Предоставляется все снаряжение.',
         }
     ]
 };
@@ -136,7 +172,7 @@ export default function RoutesSection({ onBook }: RoutesSectionProps) {
 
 function RoutesGrid({ routes, onBook }: { routes: typeof routesData.hiking, onBook: (info: BookingInfo) => void; }) {
     return (
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {routes.map((route) => {
                 const image = PlaceHolderImages.find(img => img.id === route.id);
                 return (
@@ -160,7 +196,7 @@ function RoutesGrid({ routes, onBook }: { routes: typeof routesData.hiking, onBo
                                     <div className="flex items-center"><Clock className="w-4 h-4 mr-2 text-primary" />{route.duration}</div>
                                     <div className="flex items-center"><Mountain className="w-4 h-4 mr-2 text-primary" />Сложность: {route.difficulty}</div>
                                     <div className="flex items-center"><Ruler className="w-4 h-4 mr-2 text-primary" />{route.distance}</div>
-                                    <div className="flex items-center"><Wallet className="w-4 h-4 mr-2 text-primary" />{route.price}</div>
+                                    <div className="flex items-center font-semibold"><Wallet className="w-4 h-4 mr-2 text-primary" />{route.price}</div>
                                 </div>
                                 <Button className="mt-auto w-full" onClick={() => onBook({type: 'Маршрут', name: route.title, price: route.price})}>
                                     Забронировать

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Wifi, ParkingSquare, Utensils, Star, Wallet, MapPin } from 'lucide-react';
+import { Wifi, ParkingSquare, Utensils, Star, Wallet, MapPin, PawPrint, Waves } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -28,7 +28,7 @@ const hotelsData = [
         rating: 4.5,
         price: 'от 5500 ₽/ночь',
         description: 'Уютный отель в сердце гор с панорамными видами, рестораном кавказской кухни и спа-центром.',
-        amenities: [Wifi, ParkingSquare, Utensils]
+        amenities: [Wifi, ParkingSquare, Utensils, Star]
     },
     {
         id: 'hotel-guzeripl',
@@ -37,7 +37,7 @@ const hotelsData = [
         rating: 4.2,
         price: 'от 3500 ₽/ночь',
         description: 'Тихий семейный отель на берегу реки Белой, идеален для любителей природы и рыбалки.',
-        amenities: [Wifi, ParkingSquare]
+        amenities: [Wifi, ParkingSquare, PawPrint]
     },
     {
         id: 'hotel-maykop',
@@ -55,7 +55,7 @@ const hotelsData = [
         rating: 4.7,
         price: 'от 7000 ₽/ночь',
         description: 'Роскошный спа-курорт с термальными бассейнами, широким выбором оздоровительных процедур и изысканным рестораном.',
-        amenities: [Wifi, ParkingSquare, Utensils]
+        amenities: [Wifi, ParkingSquare, Utensils, Waves]
     }
 ]
 
@@ -98,7 +98,7 @@ export default function HotelsSection({ onBook }: HotelsSectionProps) {
                             <span className="font-bold">{hotel.rating}</span>
                         </div>
                         <div className="flex gap-2">
-                           {hotel.amenities.map((Icon, i) => <Icon key={i} className="w-5 h-5 text-muted-foreground" />)}
+                           {hotel.amenities.map((Icon, i) => <Icon key={i} className="w-5 h-5 text-muted-foreground" title={Icon.displayName} />)}
                         </div>
                     </div>
                     <div className="flex items-center font-semibold text-primary">

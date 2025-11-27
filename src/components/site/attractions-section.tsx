@@ -3,8 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Maximize } from 'lucide-react';
+import { Maximize } from 'lucide-react';
 import AnimateOnScroll from './animate-on-scroll';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 
@@ -25,29 +24,29 @@ const attractions = [
     description: 'Узкий и глубокий каньон реки Белой с бурным потоком воды, оборудованный для посещения.',
   },
   {
-    id: 'granite-canyon',
-    title: 'Гранитный каньон',
-    description: 'Уникальное геологическое образование, где река Белая пробила себе путь сквозь гранитный массив.',
+    id: 'azish-cave',
+    title: 'Большая Азишская пещера',
+    description: 'Одна из самых красивых и больших пещер Европы, оборудованная для экскурсий. Поражает разнообразием натечных образований: сталактитов и сталагмитов.',
   },
   {
-    id: 'maykop',
-    title: 'Майкоп',
-    description: 'Столица республики с богатой историей, парками, музеями и знаменитым пивоваренным заводом.',
+    id: 'svyato-mihaylovskiy-monastery',
+    title: 'Свято-Михайловский монастырь',
+    description: 'Крупнейший мужской монастырь на юге России с подземными ходами, святым источником и панорамным видом на горы.',
   },
   {
     id: 'mishoko-canyon',
     title: 'Каньон Мишоко',
-    description: 'Живописное ущелье с изумрудной водой, экстремальным парком и древними стоянками человека.',
+    description: 'Живописное ущелье с изумрудной водой, экстремальным парком (виа-феррата, троллей) и древними стоянками человека.',
   },
   {
       id: 'guzeripl',
       title: 'Поселок Гузерипль',
-      description: 'Ворота в Кавказский заповедник, здесь находится самый большой дольмен в Адыгее и музей природы.',
+      description: 'Ворота в Кавказский заповедник. Здесь находится самый большой дольмен в Адыгее и музей природы.',
   },
   {
-      id: 'svyato-mihaylovskiy-monastery',
-      title: 'Свято-Михайловский монастырь',
-      description: 'Крупнейший мужской монастырь на юге России с подземными ходами и святым источником.'
+      id: 'granite-canyon',
+      title: 'Гранитный каньон',
+      description: 'Уникальное геологическое образование, где река Белая пробила себе путь сквозь гранитный массив. Популярное место для рафтинга.',
   }
 ];
 

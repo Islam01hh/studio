@@ -37,10 +37,10 @@
       "imageHint": "canyon river"
     },
     {
-      "id": "maykop",
-      "description": "Maykop city central mosque",
-      "imageUrl": "https://images.unsplash.com/photo-1620023612588-4db81d68c2be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNYXlrb3AlMjBtb3NxdWV8ZW58MHx8fHwxNzY0MjQ4NjQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "city mosque"
+      "id": "azish-cave",
+      "description": "Azish cave",
+      "imageUrl": "https://images.unsplash.com/photo-1631728370935-8664162d1d44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjBjYXZlfGVufDB8fHx8MTc2NDc0ODQxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beautiful cave"
     },
     {
       "id": "mishoko-canyon",
@@ -97,6 +97,12 @@
       "imageHint": "forest path"
     },
     {
+      "id": "route-oshten-hiking",
+      "description": "Climbing Oshten mountain",
+      "imageUrl": "https://images.unsplash.com/photo-1605553531317-21528652145b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHN1bW1pdCUyMGNhdWNhc3VzfGVufDB8fHx8MTc2NDc0OTA0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain summit"
+    },
+    {
       "id": "route-auto-ring",
       "description": "Car route through Adygea",
       "imageUrl": "https://images.unsplash.com/photo-1568662325984-729019aa5179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwdHJpcCUyMGNhdWNhc3VzfGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -107,6 +113,12 @@
       "description": "Guamka gorge railway",
       "imageUrl": "https://images.unsplash.com/photo-1633324661846-54a72851413a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
       "imageHint": "mountain railway"
+    },
+    {
+      "id": "route-auto-mountains",
+      "description": "Jeep tour in the mountains",
+      "imageUrl": "https://images.unsplash.com/photo-1630560449557-46904f483582?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqZWVwJTIwdG91ciUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQ3NDkxMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jeep mountains"
     },
     {
       "id": "route-family-adventure",
@@ -121,6 +133,12 @@
       "imageHint": "ancient dolmen"
     },
     {
+      "id": "route-hansk-park",
+      "description": "Khansk park",
+      "imageUrl": "https://images.unsplash.com/photo-1543096222-2e2e1b195939?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZW5kcm9sb2dpY2FsJTIwcGFya3xlbnwwfHx8fDE3NjQ3NDkyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dendrological park"
+    },
+    {
       "id": "route-canyoning",
       "description": "Canyoning adventure",
       "imageUrl": "https://images.unsplash.com/photo-1593414923133-144eba2f65a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
@@ -133,6 +151,12 @@
       "imageHint": "mountain climbing"
     },
     {
+      "id": "route-rafting",
+      "description": "Rafting on Belaya river",
+      "imageUrl": "https://images.unsplash.com/photo-1583295448337-285c57849646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWZ0aW5nJTIwbW91bnRhaW5zJTIwcml2ZXJ8ZW58MHx8fHwxNzY0NzQ5Mjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rafting mountains"
+    },
+    {
       "id": "hotel-lagonaki",
       "description": "Hotel in Lagonaki",
       "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
@@ -141,7 +165,7 @@
     {
       "id": "hotel-guzeripl",
       "description": "Guesthouse in Guzeripl",
-      "imageUrl": "https://images.unsplash.com/photo-1582582494705-53753b VnVlc3Rob3VzZSUyMGluJTIwZ3V6ZXJpcGwl&auto=format&fit=crop&w=1080&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1570214476695-1c276f11c5b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb3p5JTIwZ3Vlc3Rob3VzZSUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQ3NDkzODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cozy guesthouse"
     },
     {
@@ -165,7 +189,7 @@
     {
       "id": "gallery-2",
       "description": "Culture of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1533109721025-d1ae7ee7144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2xrJTIwZGFuY2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1533109721025-d1ae7ee7144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2xrJTIwZGFuY2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "folk dance"
     },
     {
@@ -191,6 +215,42 @@
       "description": "River in Adygea",
       "imageUrl": "https://images.unsplash.com/photo-1616413949390-3a4441355b41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHJpdmVyJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0Mjc4NTUyfDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "mountain river"
+    },
+    {
+      "id": "gallery-7",
+      "description": "Adyghe traditional costume",
+      "imageUrl": "https://images.unsplash.com/photo-1618481351198-a8d86a113333?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGNhdWNhc2lhbiUyMGNsb3RoaW5nfGVufDB8fHx8MTc2NDc0OTc4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "caucasian clothing"
+    },
+    {
+      "id": "gallery-8",
+      "description": "Foggy forest in Adygea",
+      "imageUrl": "https://images.unsplash.com/photo-1484591942998-1443a69b5133?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2dneSUyMG1vdW50YWluJTIwZm9yZXN0fGVufDB8fHx8MTc2NDc0OTg0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "foggy forest"
+    },
+    {
+      "id": "gallery-9",
+      "description": "Maykop Friendship Monument",
+      "imageUrl": "https://images.unsplash.com/photo-1617438464137-a87754e5a363?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNYXlrb3AlMjBtb251bWVudHxlbnwwfHx8fDE3NjQ3NDk5MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city monument"
+    },
+    {
+      "id": "gallery-10",
+      "description": "Shashlik barbecue",
+      "imageUrl": "https://images.unsplash.com/photo-1593339482999-f01a812c3666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXVjYXNpYW4lMjBiYXJiZWN1ZXxlbnwwfHx8fDE3NjQ3NTAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "caucasian barbecue"
+    },
+    {
+      "id": "gallery-11",
+      "description": "Mountain lake",
+      "imageUrl": "https://images.unsplash.com/photo-1508224676902-4382ec3245fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxha2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQ3NTAwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain lake"
+    },
+    {
+      "id": "gallery-12",
+      "description": "Adyghe dance",
+      "imageUrl": "https://images.unsplash.com/photo-1582983190825-f9393a45c714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGRhbmNlJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0NzUwMDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional dance"
     }
   ]
 }

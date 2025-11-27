@@ -1,6 +1,24 @@
 'use server';
 
 import { z } from 'zod';
+import {provideAITourGuide, AITourGuideInput} from '@/ai/flows/ai-tour-guide';
+
+// AI Tour Guide Action
+export async function submitAITourGuide(prevState: any, formData: FormData) {
+    const location = formData.get('location') as string;
+    if (!location || location.trim().length === 0) {
+        return { insight: null };
+    }
+
+    try {
+        const result = await provideAITourGuide({ location });
+        return result;
+    } catch (error) {
+        console.error(error);
+        return { insight: null };
+    }
+}
+
 
 // Schema for the contact form
 const contactSchema = z.object({
