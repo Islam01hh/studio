@@ -29,24 +29,6 @@ export async function enhanceGalleryImage(input: EnhanceGalleryImageInput): Prom
   return enhanceGalleryImageFlow(input);
 }
 
-const enhanceGalleryImagePrompt = ai.definePrompt({
-  name: 'enhanceGalleryImagePrompt',
-  input: {schema: EnhanceGalleryImageInputSchema},
-  output: {schema: EnhanceGalleryImageOutputSchema},
-  prompt: [
-    {
-      media: {url: '{{imageDataUri}}'},
-    },
-    {
-      text: 'Enhance this image by improving its sharpness, reducing noise, and correcting colors to make it look its best.',
-    },
-  ],
-  model: 'googleai/gemini-2.5-flash-image-preview',
-  config: {
-    responseModalities: ['TEXT', 'IMAGE'],
-  },
-});
-
 const enhanceGalleryImageFlow = ai.defineFlow(
   {
     name: 'enhanceGalleryImageFlow',
@@ -54,7 +36,23 @@ const enhanceGalleryImageFlow = ai.defineFlow(
     outputSchema: EnhanceGalleryImageOutputSchema,
   },
   async input => {
-    const {media} = await ai.generate(enhanceGalleryImagePrompt(input));
-    return {enhancedImageDataUri: media!.url};
+    const {media} = await ai.generate({
+        prompt: [
+            {
+              media: {url: input.imageDataUri},
+            },
+            {
+              text: 'Enhance this image by improving its sharpness, reducing noise, and correcting colors to make it look its best.',
+            },
+          ],
+          model: 'googleai/gemini-2.5-flash-image-preview',
+          config: {
+            responseModalities: ['TEXT', 'IMAGE'],
+          },
+    });
+    if (!media?.url) {
+        throw new Error('Image enhancement failed to return an image.');
+    }
+    return {enhancedImageDataUri: media.url};
   }
 );

@@ -15,7 +15,6 @@ import { Button } from '@/components/ui/button';
 import { Wand2, Loader2, RefreshCw } from 'lucide-react';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
 import { enhanceGalleryImage } from '@/ai/flows/enhance-gallery-images';
-import { Skeleton } from '../ui/skeleton';
 
 type GalleryModalProps = {
   isOpen: boolean;
@@ -28,7 +27,6 @@ export default function GalleryModal({ isOpen, setIsOpen, images, startIndex }: 
   const [api, setApi] = useState<CarouselApi>();
   const [enhancedImages, setEnhancedImages] = useState<Record<string, string>>({});
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-  const [currentImage, setCurrentImage] = useState<ImagePlaceholder | null>(null);
 
   useEffect(() => {
     if (api && isOpen) {
@@ -36,22 +34,6 @@ export default function GalleryModal({ isOpen, setIsOpen, images, startIndex }: 
     }
   }, [api, isOpen, startIndex]);
 
-  useEffect(() => {
-    if(!api) return;
-
-    const updateCurrentImage = () => {
-        const current = images[api.selectedScrollSnap()];
-        setCurrentImage(current);
-    }
-
-    api.on("select", updateCurrentImage);
-    updateCurrentImage();
-
-    return () => {
-        api.off("select", updateCurrentImage);
-    }
-
-  }, [api, images])
 
   const handleEnhance = async (image: ImagePlaceholder) => {
     setLoadingStates((prev) => ({ ...prev, [image.id]: true }));
@@ -63,12 +45,18 @@ export default function GalleryModal({ isOpen, setIsOpen, images, startIndex }: 
       reader.readAsDataURL(blob);
       reader.onloadend = async () => {
         const base64data = reader.result as string;
-        const result = await enhanceGalleryImage({ imageDataUri: base64data });
-        setEnhancedImages((prev) => ({ ...prev, [image.id]: result.enhancedImageDataUri }));
+        try {
+            const result = await enhanceGalleryImage({ imageDataUri: base64data });
+            setEnhancedImages((prev) => ({ ...prev, [image.id]: result.enhancedImageDataUri }));
+        } catch (error) {
+            console.error('Failed to enhance image with AI flow:', error);
+            // Optionally, show a toast to the user
+        } finally {
+            setLoadingStates((prev) => ({ ...prev, [image.id]: false }));
+        }
       };
     } catch (error) {
-      console.error('Failed to enhance image:', error);
-    } finally {
+      console.error('Failed to fetch or read image:', error);
       setLoadingStates((prev) => ({ ...prev, [image.id]: false }));
     }
   };
@@ -80,25 +68,34 @@ export default function GalleryModal({ isOpen, setIsOpen, images, startIndex }: 
   }
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={(open) => {
+        if (!open) {
+            // Reset states when closing the modal
+            setEnhancedImages({});
+            setLoadingStates({});
+        }
+        setIsOpen(open);
+    }}>
       <DialogContent className="max-w-4xl p-2 sm:p-4 bg-card/80 backdrop-blur-md border-border">
         <Carousel setApi={setApi} className="w-full">
           <CarouselContent>
             {images.map((image) => (
               <CarouselItem key={image.id}>
                 <div className="flex flex-col items-center justify-center gap-4">
-                  <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black/10">
                     {loadingStates[image.id] && (
                         <div className="absolute inset-0 z-10 bg-black/50 flex flex-col items-center justify-center text-white">
                             <Loader2 className="h-8 w-8 animate-spin mb-2" />
                             <p>Улучшаем изображение...</p>
                         </div>
                     )}
-                    {enhancedImages[image.id] ? (
-                      <Image src={enhancedImages[image.id]} alt={`Enhanced ${image.description}`} fill className="object-contain" />
-                    ) : (
-                      <Image src={image.imageUrl} alt={image.description} fill className="object-contain" data-ai-hint={image.imageHint} />
-                    )}
+                    <Image 
+                        src={enhancedImages[image.id] || image.imageUrl} 
+                        alt={enhancedImages[image.id] ? `Enhanced ${image.description}` : image.description}
+                        fill 
+                        className="object-contain" 
+                        data-ai-hint={image.imageHint}
+                    />
                   </div>
                   <div className="flex gap-2">
                     {enhancedImages[image.id] ? (

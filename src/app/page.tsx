@@ -15,7 +15,6 @@ import Footer from '@/components/site/footer';
 import ScrollToTop from '@/components/site/scroll-to-top';
 import Loader from '@/components/site/loader';
 import BookingModal from '@/components/site/booking-modal';
-import AITourGuideSection from '@/components/site/ai-tour-guide-section';
 
 
 export type BookingInfo = {
@@ -60,7 +59,6 @@ export default function Home() {
             <RoutesSection onBook={handleBooking}/>
             <HotelsSection onBook={handleBooking} />
             <GallerySection />
-            <AITourGuideSection />
             <WeatherWidget />
             <ContactSection />
           </div>
