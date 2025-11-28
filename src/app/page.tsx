@@ -4,10 +4,7 @@ import { useState, useEffect } from 'react';
 import Header from '@/components/site/header';
 import HeroSection from '@/components/site/hero-section';
 import AboutSection from '@/components/site/about-section';
-import AttractionsSection from '@/components/site/attractions-section';
 import CultureSection from '@/components/site/culture-section';
-import RoutesSection from '@/components/site/routes-section';
-import HotelsSection from '@/components/site/hotels-section';
 import GallerySection from '@/components/site/gallery-section';
 import ContactSection from '@/components/site/contact-section';
 import Footer from '@/components/site/footer';
@@ -19,13 +16,15 @@ import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
 import FavoritesSection from '@/components/site/favorites-section';
 import { useFavorites } from '@/hooks/use-favorites';
 import { Separator } from '@/components/ui/separator';
+import AttractionsCarousel from '@/components/site/attractions-carousel';
+import RoutesCarousel from '@/components/site/routes-carousel';
+import HotelsCarousel from '@/components/site/hotels-carousel';
 
 export type BookingInfo = {
   type: 'Маршрут' | 'Отель';
   name: string;
   price?: string;
 } | null;
-
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -51,7 +50,6 @@ export default function Home() {
   const allGalleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
 
   useEffect(() => {
-    // Имитация загрузки для демонстрации лоадера
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500); 
@@ -70,19 +68,19 @@ export default function Home() {
         <main className="overflow-x-hidden bg-background">
           <HeroSection />
           <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24 md:space-y-32">
-            <AboutSection />
+            <AttractionsCarousel onGalleryOpen={openGalleryModal} />
             <Separator />
-            <AttractionsSection onGalleryOpen={openGalleryModal}/>
-            <Separator />
+            <RoutesCarousel onBook={handleBooking} />
+             <Separator />
+            <HotelsCarousel onBook={handleBooking} />
             {favorites.length > 0 && (
                 <>
-                    <FavoritesSection onBook={handleBooking} />
                     <Separator />
+                    <FavoritesSection onBook={handleBooking} />
                 </>
             )}
-            <RoutesSection onBook={handleBooking}/>
             <Separator />
-            <HotelsSection onBook={handleBooking} />
+            <AboutSection />
             <Separator />
             <CultureSection />
             <Separator />

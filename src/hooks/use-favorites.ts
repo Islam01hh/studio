@@ -2,11 +2,10 @@
 
 import { useContext } from 'react';
 import { AppContext } from '@/context/app-context';
-import type { Attraction } from '@/components/site/attractions-section';
-import type { Hotel } from '@/components/site/hotels-section';
+import type { Attraction } from '@/data/attractions';
+import type { Hotel } from '@/data/hotels';
 
-export type FavoriteItem = (Attraction | Hotel) & { type: 'attraction' | 'hotel' };
-
+export type FavoriteItem = (Attraction | Hotel);
 
 export const useFavorites = () => {
   const context = useContext(AppContext);
@@ -23,9 +22,7 @@ export const useFavorites = () => {
       if (isFavorite) {
         return prevFavorites.filter(fav => fav.id !== item.id);
       } else {
-        // Добавляем 'type' к объекту перед сохранением
-        const newItem = { ...item };
-        return [...prevFavorites, newItem];
+        return [...prevFavorites, item];
       }
     });
   };
