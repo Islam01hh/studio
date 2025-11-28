@@ -28,11 +28,11 @@ export default function Footer() {
           <div>
             <h4 className="font-headline text-lg font-semibold mb-4">Быстрые ссылки</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><Link href="#home" className="hover:text-white transition-colors">Главная</Link></li>
-              <li><Link href="#attractions" className="hover:text-white transition-colors">Достопримечательности</Link></li>
-              <li><Link href="#routes" className="hover:text-white transition-colors">Маршруты</Link></li>
-              <li><Link href="#hotels" className="hover:text-white transition-colors">Отели</Link></li>
-              <li><Link href="#gallery" className="hover:text-white transition-colors">Галерея</Link></li>
+              <li><Link href="/" className="hover:text-white transition-colors">Главная</Link></li>
+              <li><Link href="/attractions" className="hover:text-white transition-colors">Достопримечательности</Link></li>
+              <li><Link href="/routes" className="hover:text-white transition-colors">Маршруты</Link></li>
+              <li><Link href="/hotels" className="hover:text-white transition-colors">Отели</Link></li>
+              <li><Link href="/gallery" className="hover:text-white transition-colors">Галерея</Link></li>
             </ul>
           </div>
 
@@ -57,6 +57,9 @@ export default function Footer() {
         </div>
         
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60 text-sm">
+          <p className="mb-2">
+            Разработано Хачемизовым Исламом Аминовичем, студентом колледжа МГГТК АГУ.
+          </p>
           <p>&copy; {currentYear} Сердце Кавказа: Путеводитель по Адыгее. Все права защищены.</p>
         </div>
       </div>

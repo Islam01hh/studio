@@ -16,6 +16,7 @@ import {
 const navItems = [
   { href: '/attractions', label: 'Достопримечательности' },
   { href: '/routes', label: 'Маршруты' },
+  { href: '/entertainments', label: 'Развлечения' },
   { href: '/hotels', label: 'Отели' },
   { href: '/gallery', label: 'Галерея' },
   { href: '/about', label: 'О нас' },

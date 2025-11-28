@@ -251,6 +251,24 @@
       "description": "Adyghe dance",
       "imageUrl": "https://images.unsplash.com/photo-1582983190825-f9393a45c714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGRhbmNlJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0NzUwMDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "traditional dance"
+    },
+    {
+      "id": "entertainment-rafting",
+      "description": "Rafting on a mountain river",
+      "imageUrl": "https://images.unsplash.com/photo-1583295448337-285c57849646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWZ0aW5nJTIwbW91bnRhaW5zJTIwcml2ZXJ8ZW58MHx8fHwxNzY0NzQ5Mjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rafting mountains"
+    },
+    {
+      "id": "entertainment-canyoning",
+      "description": "Canyoning adventure in a gorge",
+      "imageUrl": "https://images.unsplash.com/photo-1593414923133-144eba2f65a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "canyoning gorge"
+    },
+    {
+      "id": "entertainment-horse-riding",
+      "description": "Horse riding in the mountains",
+      "imageUrl": "https://images.unsplash.com/photo-1598756158315-38e55c7a36f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3JzZSUyMHJpZGluZyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQ3NDkyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "horse riding"
     }
   ]
 }
