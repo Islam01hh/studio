@@ -17,6 +17,7 @@ import Loader from '@/components/site/loader';
 import BookingModal from '@/components/site/booking-modal';
 import GalleryModal from '@/components/site/gallery-modal';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
+import AITourGuideSection from '@/components/site/ai-tour-guide-section';
 
 
 export type BookingInfo = {
@@ -78,6 +79,7 @@ export default function Home() {
               const index = images.findIndex(img => img.id === id);
               handleGalleryOpen(images, index >= 0 ? index : 0);
             }}/>
+            <AITourGuideSection />
             <WeatherWidget />
             <ContactSection />
           </div>
