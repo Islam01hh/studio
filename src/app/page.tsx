@@ -9,7 +9,6 @@ import CultureSection from '@/components/site/culture-section';
 import RoutesSection from '@/components/site/routes-section';
 import HotelsSection from '@/components/site/hotels-section';
 import GallerySection from '@/components/site/gallery-section';
-import WeatherWidget from '@/components/site/weather-widget';
 import ContactSection from '@/components/site/contact-section';
 import Footer from '@/components/site/footer';
 import ScrollToTop from '@/components/site/scroll-to-top';
@@ -19,7 +18,7 @@ import GalleryModal from '@/components/site/gallery-modal';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
 import FavoritesSection from '@/components/site/favorites-section';
 import { useFavorites } from '@/hooks/use-favorites';
-
+import { Separator } from '@/components/ui/separator';
 
 export type BookingInfo = {
   type: 'Маршрут' | 'Отель';
@@ -43,20 +42,6 @@ export default function Home() {
     setIsBookingModalOpen(true);
   };
 
-  const handleGalleryOpen = (images: ImagePlaceholder[], startIndex: number) => {
-    setGalleryImages(images);
-    setGalleryStartIndex(startIndex);
-    setIsGalleryModalOpen(true);
-  }
-
-  useEffect(() => {
-    // Имитация загрузки для демонстрации лоадера
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2500); 
-    return () => clearTimeout(timer);
-  }, []);
-
   const openGalleryModal = (images: ImagePlaceholder[], startIndex: number) => {
     setGalleryImages(images);
     setGalleryStartIndex(startIndex);
@@ -65,31 +50,49 @@ export default function Home() {
   
   const allGalleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
 
+  useEffect(() => {
+    // Имитация загрузки для демонстрации лоадера
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500); 
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Loader loading={loading} />
       <div
-        className={`transition-opacity duration-500 ${
+        className={`transition-opacity duration-700 ${
           loading ? 'opacity-0' : 'opacity-100'
         }`}
       >
         <Header />
-        <main className="overflow-x-hidden">
+        <main className="overflow-x-hidden bg-background">
           <HeroSection />
-          <div className="space-y-16 md:space-y-24 lg:space-y-32">
+          <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24 md:space-y-32">
             <AboutSection />
-            <AttractionsSection onGalleryOpen={handleGalleryOpen}/>
-            {favorites.length > 0 && <FavoritesSection onBook={handleBooking} />}
-            <CultureSection />
+            <Separator />
+            <AttractionsSection onGalleryOpen={openGalleryModal}/>
+            <Separator />
+            {favorites.length > 0 && (
+                <>
+                    <FavoritesSection onBook={handleBooking} />
+                    <Separator />
+                </>
+            )}
             <RoutesSection onBook={handleBooking}/>
+            <Separator />
             <HotelsSection onBook={handleBooking} />
+            <Separator />
+            <CultureSection />
+            <Separator />
             <GallerySection onImageClick={(id) => {
                 const imageIndex = allGalleryImages.findIndex(img => img.id === id);
                 if (imageIndex !== -1) {
                     openGalleryModal(allGalleryImages, imageIndex);
                 }
             }}/>
-            <WeatherWidget />
+            <Separator />
             <ContactSection />
           </div>
         </main>
