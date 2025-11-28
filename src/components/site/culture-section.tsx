@@ -82,7 +82,7 @@ export default function CultureSection() {
       </section>
 
       <Dialog open={!!selectedItem} onOpenChange={(isOpen) => !isOpen && setSelectedItem(null)}>
-        <DialogContent className="max-w-3xl">
+        <DialogContent className="max-w-3xl bg-card">
           {selectedItem && (
             <>
               <DialogHeader>

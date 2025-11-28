@@ -36,8 +36,7 @@ type BookingModalProps = {
 
 export default function BookingModal({ isOpen, setIsOpen, bookingInfo }: BookingModalProps) {
   const { toast } = useToast();
-  const [state, formAction] = useActionState(submitBookingForm, null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [state, formAction, isSubmitting] = useActionState(submitBookingForm, null);
 
   const form = useForm<BookingFormValues>({
     resolver: zodResolver(bookingSchema),
@@ -65,7 +64,6 @@ export default function BookingModal({ isOpen, setIsOpen, bookingInfo }: Booking
 
   useEffect(() => {
     if (state) {
-      setIsSubmitting(false);
       toast({
         title: state.success ? 'Успех!' : 'Ошибка',
         description: state.message,
@@ -78,16 +76,11 @@ export default function BookingModal({ isOpen, setIsOpen, bookingInfo }: Booking
     }
   }, [state, toast, form, setIsOpen]);
 
-  const onSubmit = (data: FormData) => {
-    setIsSubmitting(true);
-    formAction(data);
-  };
-  
   if (!bookingInfo) return null;
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="max-w-xl">
+      <DialogContent className="max-w-xl bg-card">
         <DialogHeader>
           <DialogTitle className="font-headline text-2xl text-primary">
             Бронирование: {bookingInfo.type}
@@ -97,7 +90,7 @@ export default function BookingModal({ isOpen, setIsOpen, bookingInfo }: Booking
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
-          <form action={onSubmit} className="space-y-4 mt-4">
+          <form action={formAction} className="space-y-4 mt-4">
             <input type="hidden" {...form.register('bookingType')} />
             <input type="hidden" {...form.register('bookingName')} />
 

@@ -17,6 +17,8 @@ import Loader from '@/components/site/loader';
 import BookingModal from '@/components/site/booking-modal';
 import GalleryModal from '@/components/site/gallery-modal';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
+import FavoritesSection from '@/components/site/favorites-section';
+import { useFavorites } from '@/hooks/use-favorites';
 
 
 export type BookingInfo = {
@@ -33,6 +35,8 @@ export default function Home() {
   const [isGalleryModalOpen, setIsGalleryModalOpen] = useState(false);
   const [galleryImages, setGalleryImages] = useState<ImagePlaceholder[]>([]);
   const [galleryStartIndex, setGalleryStartIndex] = useState(0);
+
+  const { favorites } = useFavorites();
 
   const handleBooking = (info: BookingInfo) => {
     setBookingInfo(info);
@@ -67,6 +71,7 @@ export default function Home() {
           <div className="space-y-16 md:space-y-24 lg:space-y-32">
             <AboutSection />
             <AttractionsSection onGalleryOpen={handleGalleryOpen}/>
+            {favorites.length > 0 && <FavoritesSection onBook={handleBooking} />}
             <CultureSection />
             <RoutesSection onBook={handleBooking}/>
             <HotelsSection onBook={handleBooking} />

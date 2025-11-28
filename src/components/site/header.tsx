@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Compass, Menu, X } from 'lucide-react';
+import { Compass, Menu, X, Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { useFavorites } from '@/hooks/use-favorites';
 
 const navItems = [
   { href: '#home', label: 'Главная' },
   { href: '#about', label: 'Об Адыгее'},
   { href: '#attractions', label: 'Места' },
+  { href: '#favorites', label: 'Избранное', isFavoriteLink: true },
   { href: '#culture', label: 'Культура' },
   { href: '#routes', label: 'Маршруты' },
   { href: '#hotels', label: 'Отели' },
@@ -21,6 +23,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
+  const { favorites } = useFavorites();
+
+  const visibleNavItems = navItems.filter(item => !item.isFavoriteLink || favorites.length > 0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,13 +33,13 @@ export default function Header() {
       setHasScrolled(window.scrollY > 50);
 
       // Определяем, какая секция сейчас активна
-      const sections = navItems.map(item => document.querySelector(item.href));
+      const sections = visibleNavItems.map(item => document.querySelector(item.href));
       const scrollPosition = window.scrollY + 150; // Смещение для более точного определения
 
       for (let i = sections.length - 1; i >= 0; i--) {
           const section = sections[i];
           if (section && (section as HTMLElement).offsetTop <= scrollPosition) {
-              setActiveSection(navItems[i].href);
+              setActiveSection(visibleNavItems[i].href);
               break;
           }
       }
@@ -46,7 +51,7 @@ export default function Header() {
     
     // Очищаем слушатель при размонтировании компонента
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [visibleNavItems]);
 
   const handleLinkClick = (href: string) => {
     setActiveSection(href);
@@ -74,7 +79,7 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -87,7 +92,7 @@ export default function Header() {
                     activeSection === item.href ? 'text-primary font-semibold' : 'text-foreground/80'
                 )}
               >
-                {item.label}
+                {item.isFavoriteLink ? <Heart className="inline-block h-4 w-4 mr-1" /> : item.label}
               </a>
             ))}
           </nav>
@@ -117,7 +122,7 @@ export default function Header() {
             </Button>
           </div>
           <nav className="flex flex-col items-center gap-6">
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -127,7 +132,7 @@ export default function Header() {
                   handleLinkClick(item.href);
                 }}
               >
-                {item.label}
+                {item.isFavoriteLink ? 'Избранное' : item.label}
               </a>
             ))}
           </nav>

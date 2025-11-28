@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Wifi, ParkingSquare, Utensils, Star, Wallet, MapPin, PawPrint, Waves } from 'lucide-react';
+import { Wifi, ParkingSquare, Utensils, Star, Wallet, MapPin, PawPrint, Waves, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -13,6 +13,8 @@ import {
 } from '@/components/ui/card';
 import AnimateOnScroll from './animate-on-scroll';
 import type { BookingInfo } from '@/app/page';
+import { useFavorites } from '@/hooks/use-favorites';
+import { cn } from '@/lib/utils';
 
 
 type HotelsSectionProps = {
@@ -28,7 +30,8 @@ const hotelsData = [
         rating: 4.5,
         price: 'от 5500 ₽/ночь',
         description: 'Уютный отель в сердце гор с панорамными видами, рестораном кавказской кухни и спа-центром.',
-        amenities: [Wifi, ParkingSquare, Utensils, Star]
+        amenities: [Wifi, ParkingSquare, Utensils, Star],
+        type: 'hotel' as const
     },
     {
         id: 'hotel-guzeripl',
@@ -37,7 +40,8 @@ const hotelsData = [
         rating: 4.2,
         price: 'от 3500 ₽/ночь',
         description: 'Тихий семейный отель на берегу реки Белой, идеален для любителей природы и рыбалки.',
-        amenities: [Wifi, ParkingSquare, PawPrint]
+        amenities: [Wifi, ParkingSquare, PawPrint],
+        type: 'hotel' as const
     },
     {
         id: 'hotel-maykop',
@@ -46,7 +50,8 @@ const hotelsData = [
         rating: 4.8,
         price: 'от 4800 ₽/ночь',
         description: 'Современный бизнес-отель в центре города. Идеально подходит для деловых поездок и знакомства со столицей.',
-        amenities: [Wifi, ParkingSquare, Utensils]
+        amenities: [Wifi, ParkingSquare, Utensils],
+        type: 'hotel' as const
     },
     {
         id: 'hotel-khadzhokh',
@@ -55,11 +60,17 @@ const hotelsData = [
         rating: 4.7,
         price: 'от 7000 ₽/ночь',
         description: 'Роскошный спа-курорт с термальными бассейнами, широким выбором оздоровительных процедур и изысканным рестораном.',
-        amenities: [Wifi, ParkingSquare, Utensils, Waves]
+        amenities: [Wifi, ParkingSquare, Utensils, Waves],
+        type: 'hotel' as const
     }
-]
+];
+
+export type Hotel = typeof hotelsData[0];
+
 
 export default function HotelsSection({ onBook }: HotelsSectionProps) {
+  const { favorites, toggleFavorite } = useFavorites();
+
   return (
     <section id="hotels" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -71,9 +82,11 @@ export default function HotelsSection({ onBook }: HotelsSectionProps) {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {hotelsData.map((hotel, index) => {
             const image = PlaceHolderImages.find(img => img.id === hotel.id);
+            const isFavorite = favorites.some(fav => fav.id === hotel.id);
+
             return (
               <AnimateOnScroll key={hotel.id} delay={index * 0.1}>
-                <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <Card className="group flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                   <CardHeader className="p-0 relative h-56">
                     {image && (
                       <Image
@@ -85,6 +98,20 @@ export default function HotelsSection({ onBook }: HotelsSectionProps) {
                         data-ai-hint={image.imageHint}
                       />
                     )}
+                     <div className="absolute top-3 right-3 z-10">
+                        <Button 
+                            size="icon" 
+                            variant="ghost" 
+                            className="w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 text-white"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                toggleFavorite(hotel);
+                            }}
+                             aria-label="Добавить в избранное"
+                        >
+                            <Heart className={cn("w-5 h-5 transition-colors", isFavorite ? 'text-red-500 fill-current' : 'text-white')} />
+                        </Button>
+                    </div>
                   </CardHeader>
                   <CardContent className="p-6 flex-grow flex flex-col">
                     <CardTitle className="font-headline text-xl text-primary mb-2">{hotel.name}</CardTitle>
