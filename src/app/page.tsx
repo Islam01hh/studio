@@ -1,13 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Header from '@/components/site/header';
 import HeroSection from '@/components/site/hero-section';
-import AboutSection from '@/components/site/about-section';
-import CultureSection from '@/components/site/culture-section';
-import GallerySection from '@/components/site/gallery-section';
-import ContactSection from '@/components/site/contact-section';
-import Footer from '@/components/site/footer';
 import ScrollToTop from '@/components/site/scroll-to-top';
 import Loader from '@/components/site/loader';
 import BookingModal from '@/components/site/booking-modal';
@@ -19,6 +13,8 @@ import { Separator } from '@/components/ui/separator';
 import AttractionsCarousel from '@/components/site/attractions-carousel';
 import RoutesCarousel from '@/components/site/routes-carousel';
 import HotelsCarousel from '@/components/site/hotels-carousel';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export type BookingInfo = {
   type: 'Маршрут' | 'Отель';
@@ -47,8 +43,6 @@ export default function Home() {
     setIsGalleryModalOpen(true);
   };
   
-  const allGalleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -64,37 +58,37 @@ export default function Home() {
           loading ? 'opacity-0' : 'opacity-100'
         }`}
       >
-        <Header />
         <main className="overflow-x-hidden bg-background">
           <HeroSection />
           <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24 md:space-y-32">
             <AttractionsCarousel onGalleryOpen={openGalleryModal} />
+            <div className="text-center">
+                <Button asChild size="lg">
+                    <Link href="/attractions">Смотреть все достопримечательности</Link>
+                </Button>
+            </div>
             <Separator />
             <RoutesCarousel onBook={handleBooking} />
-             <Separator />
+             <div className="text-center">
+                <Button asChild size="lg">
+                    <Link href="/routes">Смотреть все маршруты</Link>
+                </Button>
+            </div>
+            <Separator />
             <HotelsCarousel onBook={handleBooking} />
+            <div className="text-center">
+                <Button asChild size="lg">
+                    <Link href="/hotels">Смотреть все отели</Link>
+                </Button>
+            </div>
             {favorites.length > 0 && (
                 <>
                     <Separator />
                     <FavoritesSection onBook={handleBooking} />
                 </>
             )}
-            <Separator />
-            <AboutSection />
-            <Separator />
-            <CultureSection />
-            <Separator />
-            <GallerySection onImageClick={(id) => {
-                const imageIndex = allGalleryImages.findIndex(img => img.id === id);
-                if (imageIndex !== -1) {
-                    openGalleryModal(allGalleryImages, imageIndex);
-                }
-            }}/>
-            <Separator />
-            <ContactSection />
           </div>
         </main>
-        <Footer />
         <ScrollToTop />
         <BookingModal isOpen={isBookingModalOpen} setIsOpen={setIsBookingModalOpen} bookingInfo={bookingInfo} />
         <GalleryModal isOpen={isGalleryModalOpen} setIsOpen={setIsGalleryModalOpen} images={galleryImages} startIndex={galleryStartIndex} />

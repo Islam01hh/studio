@@ -4,6 +4,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { Inter, Cormorant_Garamond } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { AppProvider } from '@/context/app-context';
+import Header from '@/components/site/header';
+import Footer from '@/components/site/footer';
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -47,8 +49,10 @@ export default function RootLayout({
     <html lang="ru" className="scroll-smooth">
       <body className={cn('font-body antialiased', inter.variable, cormorant.variable)}>
         <AppProvider>
-          {children}
-          <Toaster />
+            <Header />
+            {children}
+            <Footer />
+            <Toaster />
         </AppProvider>
       </body>
     </html>
