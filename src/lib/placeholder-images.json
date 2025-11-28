@@ -2,273 +2,273 @@
   "placeholderImages": [
     {
       "id": "hero",
-      "description": "Hero background image of Adygea mountains",
-      "imageUrl": "https://images.unsplash.com/photo-1597521193393-d232eb9491c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxDYXVjYXN1cyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQyNzE1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1920",
-      "imageHint": "Caucasus mountains"
+      "description": "Величественные горы Адыгеи на рассвете",
+      "imageUrl": "https://images.unsplash.com/photo-1589332159677-1335414d44bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXVjYXN1cyUyMG1vdW50YWlucyUyMHN1bnJpc2V8ZW58MHx8fHwxNzE5OTU0Mjc3fDA&ixlib=rb-4.1.0&q=80&w=1920",
+      "imageHint": "Caucasus sunrise"
     },
     {
       "id": "adygea-map",
-      "description": "Stylized map of Adygea region",
-      "imageUrl": "https://images.unsplash.com/photo-1543353403-628063a39b34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvbGQlMjBtYXAlMjBvZiUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQyNzE1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "old map"
+      "description": "Старинная карта и компас для путешествий",
+      "imageUrl": "https://images.unsplash.com/photo-1521295121783-8a321d551ac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwbWFwJTIwY29tcGFzc3xlbnwwfHx8fDE3MTk5NTQzNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vintage map"
     },
     {
       "id": "plato-lagonaki",
-      "description": "Lago-Naki plateau",
+      "description": "Цветущие луга на плато Лаго-Наки",
       "imageUrl": "https://images.unsplash.com/photo-1616039138441-2679cb48a8d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxMYWdvLU5ha2klMjBwbGF0ZWF1fGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "plateau mountains"
+      "imageHint": "lago-naki plateau"
     },
     {
       "id": "rufabgo-waterfalls",
-      "description": "Rufabgo waterfalls",
-      "imageUrl": "https://images.unsplash.com/photo-1500332847952-3de0033c7015?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3YXRlcmZhbGwlMjBmb3Jlc3QlMjBDYXVjYXN1c3xlbnwwfHx8fDE3NjQxODI2NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "waterfall forest"
+      "description": "Один из водопадов Руфабго в летнем лесу",
+      "imageUrl": "https://images.unsplash.com/photo-1632360516766-364232361d27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxydWZhYmdvJTIwd2F0ZXJmYWxsfGVufDB8fHx8MTcxOTk1NDQ1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rufabgo waterfall"
     },
     {
       "id": "khadzhokh-gorge",
-      "description": "Khadzhokh Gorge",
-      "imageUrl": "https://images.unsplash.com/photo-1579930335293-6c8a0a00c655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-      "imageHint": "rocky gorge"
+      "description": "Хаджохская теснина и река Белая",
+      "imageUrl": "https://images.unsplash.com/photo-1622383289873-a496a394334f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYW55b24lMjBvZiUyMGJlbGF5YSUyMHJpdmVyfGVufDB8fHx8MTcxOTk1NDUwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "belaya river"
     },
     {
       "id": "granite-canyon",
-      "description": "Granite canyon",
-      "imageUrl": "https://images.unsplash.com/photo-1622383289873-a496a394334f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHcmFuaXRlJTIwY2FueW9uJTIwQWR5Z2VhJTIwUml2ZXJ8ZW58MHx8fHwxNzY0MjUxMjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "canyon river"
+      "description": "Скалистые берега Гранитного каньона",
+      "imageUrl": "https://images.unsplash.com/photo-1658422119044-67878a1262d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHcmFuaXRlJTIwY2FueW9uJTIwQWR5Z2VhJTIwUml2ZXJ8ZW58MHx8fHwxNzY0MjUxMjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "granite canyon"
     },
     {
       "id": "azish-cave",
-      "description": "Azish cave",
-      "imageUrl": "https://images.unsplash.com/photo-1631728370935-8664162d1d44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjBjYXZlfGVufDB8fHx8MTc2NDc0ODQxNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "beautiful cave"
+      "description": "Подземные залы Большой Азишской пещеры",
+      "imageUrl": "https://images.unsplash.com/photo-1522204523234-872b3b78afd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWplesticCUyMHVuZGVyZ3JvdW5kJTIwY2F2ZXxlbnwwfHx8fDE3MTk5NTQ1ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "majestic cave"
     },
     {
       "id": "mishoko-canyon",
-      "description": "Mishoko canyon",
+      "description": "Висячий мост в ущелье Мишоко",
       "imageUrl": "https://images.unsplash.com/photo-1632952809265-2d936166164a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-      "imageHint": "canyon gorge"
+      "imageHint": "rope bridge"
     },
     {
       "id": "guzeripl",
-      "description": "Village Guzeripl",
-      "imageUrl": "https://images.unsplash.com/photo-1617364973307-950d8a5f8b9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "description": "Горный поселок Гузерипль",
+      "imageUrl": "https://images.unsplash.com/photo-1598463595999-9892a3439162?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHZpbGxhZ2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3MTk5NTQ3MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mountain village"
     },
     {
       "id": "svyato-mihaylovskiy-monastery",
-      "description": "St. Michael's Monastery",
+      "description": "Свято-Михайловский монастырь на фоне гор",
       "imageUrl": "https://images.unsplash.com/photo-1589656914093-686419b856e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
       "imageHint": "orthodox monastery"
     },
     {
       "id": "adyghe-music",
-      "description": "Traditional Adyghe musical instruments",
-      "imageUrl": "https://images.unsplash.com/photo-1511192336575-5a79af1e9f29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzM3wwfDF8c2VhcmNofDE0fHxvbGQlMjBtdXNpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNjc3MjU1MDIyfDA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "musical instruments"
+      "description": "Традиционная адыгская гармонь",
+      "imageUrl": "https://images.unsplash.com/photo-1586777653428-257601691761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbGQlMjBhY2NvcmRpb258ZW58MHx8fHwxNzE5OTU0Nzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "old accordion"
     },
     {
       "id": "adyghe-cuisine",
-      "description": "Adyghe cheese and traditional food",
-      "imageUrl": "https://images.unsplash.com/photo-1559922159-d3a919864d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzM3wwfDF8c2VhcmNofDEyfHx0cmFkaXRpb25hbCUyMGZvb2QlMjBjYXVjYXN1c3xlbnwwfHx8fDE2NzcyNTQ5NzJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "caucasus food"
+      "description": "Аппетитный адыгейский сыр",
+      "imageUrl": "https://images.unsplash.com/photo-1628042413341-426783893918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob21lbWFkZSUyMGNoZWVzZXxlbnwwfHx8fDE3NjQyMzE2NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "homemade cheese"
     },
     {
       "id": "adyghe-crafts",
-      "description": "Adyghe gold embroidery",
+      "description": "Золотое шитье - традиционное ремесло адыгов",
       "imageUrl": "https://images.unsplash.com/photo-1618286846152-327e53f2c522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzM3wwfDF8c2VhcmNofDEwfHxnb2xkZW4lMjBlbWJyb2lkZXJ5fGVufDB8fHx8MTY3NzI1NDk5NXww&ixlib=rb-4.0.3&q=80&w=1080",
       "imageHint": "gold embroidery"
     },
     {
       "id": "adyghe-holidays",
-      "description": "Folk festival in the mountains",
-      "imageUrl": "https://images.unsplash.com/photo-1533109721025-d1ae7ee7144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2xrJTIwZGFuY2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Народный фестиваль в горах Кавказа",
+      "imageUrl": "https://images.unsplash.com/photo-1533109721025-d1ae7ee7144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2xrJTIwZmVzdGl2YWwlMjBjYXVjYXN1c3xlbnwwfHx8fDE3MTk5NTQ5NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "folk festival"
     },
     {
       "id": "route-lagonaki-hiking",
-      "description": "Hiking route to Lago-Naki",
+      "description": "Пеший поход в горах Кавказа",
       "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaWtpbmclMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQxOTMyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hiking caucasus"
     },
     {
       "id": "route-rufabgo-hiking",
-      "description": "Hiking route to Rufabgo waterfalls",
-      "imageUrl": "https://images.unsplash.com/photo-1542382257-80ded54c0416?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjBwYXRoJTIwd2F0ZXJmYWxsfGVufDB8fHx8MTc2NDIwNzA1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "forest path"
+      "description": "Тропа, ведущая к водопаду в лесу",
+      "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjBwYXRoJTIwdG8lMjB3YXRlcmZhbGx8ZW58MHx8fHwxNzE5OTU1MDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest waterfall"
     },
     {
       "id": "route-oshten-hiking",
-      "description": "Climbing Oshten mountain",
-      "imageUrl": "https://images.unsplash.com/photo-1605553531317-21528652145b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHN1bW1pdCUyMGNhdWNhc3VzfGVufDB8fHx8MTc2NDc0OTA0OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mountain summit"
+      "description": "Восхождение на вершину горы Оштен",
+      "imageUrl": "https://images.unsplash.com/photo-1589593438342-925345ba5d16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGNsaW1iaW5nJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0Mjc4NTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain climbing"
     },
     {
       "id": "route-auto-ring",
-      "description": "Car route through Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1568662325984-729019aa5179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwdHJpcCUyMGNhdWNhc3VzfGVufDB8fHx8MTc2NDI3ODU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "road trip"
+      "description": "Автомобильная дорога, вьющаяся через горы",
+      "imageUrl": "https://images.unsplash.com/photo-1542224562-3873392480b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzZXJwZW50aW5lJTIwcm9hZCUyMG1vdW50YWluc3xlbnwwfHx8fDE3MTk5NTUxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "serpentine road"
     },
     {
       "id": "route-auto-guamka",
-      "description": "Guamka gorge railway",
+      "description": "Старинный поезд в Гуамском ущелье",
       "imageUrl": "https://images.unsplash.com/photo-1633324661846-54a72851413a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
       "imageHint": "mountain railway"
     },
     {
       "id": "route-auto-mountains",
-      "description": "Jeep tour in the mountains",
-      "imageUrl": "https://images.unsplash.com/photo-1630560449557-46904f483582?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqZWVwJTIwdG91ciUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQ3NDkxMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "jeep mountains"
+      "description": "Внедорожник на вершине горы",
+      "imageUrl": "https://images.unsplash.com/photo-1528562306739-d3a3f591a32a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdXYlMjBvbiUyMG1vdW50YWluJTIwdG9wfGVufDB8fHx8MTcxOTk1NTI0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "suv mountain"
     },
     {
       "id": "route-family-adventure",
-      "description": "Family friendly route",
+      "description": "Семья наслаждается видом в горах",
       "imageUrl": "https://images.unsplash.com/photo-1527513364923-a075390069c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBoaWtpbmclMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzEwMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "family hiking"
     },
     {
       "id": "route-dolmens-and-legends",
-      "description": "Ancient dolmens",
+      "description": "Древний дольмен в лесу",
       "imageUrl": "https://images.unsplash.com/photo-1601607598687-94362145899b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
       "imageHint": "ancient dolmen"
     },
     {
       "id": "route-hansk-park",
-      "description": "Khansk park",
-      "imageUrl": "https://images.unsplash.com/photo-1543096222-2e2e1b195939?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZW5kcm9sb2dpY2FsJTIwcGFya3xlbnwwfHx8fDE3NjQ3NDkyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dendrological park"
+      "description": "Живописная аллея в дендропарке",
+      "imageUrl": "https://images.unsplash.com/photo-1478248489405-c43cec4f42f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjBwYXJrJTIwYWxsZXl8ZW58MHx8fHwxNzE5OTU1NDEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "park alley"
     },
     {
       "id": "route-canyoning",
-      "description": "Canyoning adventure",
-      "imageUrl": "https://images.unsplash.com/photo-1593414923133-144eba2f65a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-      "imageHint": "canyoning adventure"
+      "description": "Человек спускается по водопаду",
+      "imageUrl": "https://images.unsplash.com/photo-1533239209342-534b637a2818?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYW55b25pbmclMjB3YXRlcmZhbGx8ZW58MHx8fHwxNzE5OTU1NDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "canyoning waterfall"
     },
     {
       "id": "route-fisht-climbing",
-      "description": "Climbing Mount Fisht",
-      "imageUrl": "https://images.unsplash.com/photo-1589593438342-925345ba5d16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGNsaW1iaW5nJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0Mjc4NTUyfDA&ixlibrb-4.1.0&q=80&w=1080",
-      "imageHint": "mountain climbing"
+      "description": "Альпинист на фоне заснеженных вершин",
+      "imageUrl": "https://images.unsplash.com/photo-1549477169-34a50b388720?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbHBpbmlzdCUyMHN1bW1pdCUyMGNhdWNhc3VzfGVufDB8fHx8MTcxOTk1NTUwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "alpinist summit"
     },
     {
       "id": "route-rafting",
-      "description": "Rafting on Belaya river",
-      "imageUrl": "https://images.unsplash.com/photo-1583295448337-285c57849646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWZ0aW5nJTIwbW91bnRhaW5zJTIwcml2ZXJ8ZW58MHx8fHwxNzY0NzQ5Mjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "rafting mountains"
+      "description": "Команда занимается рафтингом на бурной реке",
+      "imageUrl": "https://images.unsplash.com/photo-1605333152598-3874a94eba13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWZ0aW5nJTIwdGVhbSUyMG1vdW50YWlufGVufDB8fHx8MTcxOTk1NTU0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rafting team"
     },
     {
       "id": "hotel-lagonaki",
-      "description": "Hotel in Lagonaki",
+      "description": "Роскошный отель с бассейном в горах",
       "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
       "imageHint": "mountain hotel"
     },
     {
       "id": "hotel-guzeripl",
-      "description": "Guesthouse in Guzeripl",
+      "description": "Уютный гостевой дом у реки",
       "imageUrl": "https://images.unsplash.com/photo-1570214476695-1c276f11c5b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb3p5JTIwZ3Vlc3Rob3VzZSUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQ3NDkzODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cozy guesthouse"
     },
     {
       "id": "hotel-maykop",
-      "description": "Hotel in Maykop",
+      "description": "Современный отель в центре города",
       "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-      "imageHint": "city hotel"
+      "imageHint": "modern hotel"
     },
     {
       "id": "hotel-khadzhokh",
-      "description": "Spa hotel near Khadzhokh",
-      "imageUrl": "https://images.unsplash.com/photo-1615880484734-04533857fabf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "description": "Спа-отель с термальным бассейном",
+      "imageUrl": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGElMjByZXNvcnQlMjBwb29sfGVufDB8fHx8MTcxOTk1NTc2MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "spa resort"
     },
     {
       "id": "gallery-1",
-      "description": "Nature of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYXVjYXN1cyUyMG5hdHVyZXxlbnwwfHx8fDE3NjQxNjM3Nzh8MA&ixlibrb-4.1.0&q=80&w=1080",
-      "imageHint": "nature landscape"
+      "description": "Озеро в горах Кавказа",
+      "imageUrl": "https://images.unsplash.com/photo-1508224676902-4382ec3245fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxha2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQ3NTAwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain lake"
     },
     {
       "id": "gallery-2",
-      "description": "Culture of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1533109721025-d1ae7ee7144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2xrJTIwZGFuY2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "folk dance"
+      "description": "Традиционный адыгский танец",
+      "imageUrl": "https://images.unsplash.com/photo-1582983190825-f9393a45c714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGRhbmNlJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0NzUwMDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional dance"
     },
     {
       "id": "gallery-3",
-      "description": "Architecture of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1598463595999-9892a3439162?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbGQlMjBidWlsZGluZyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQyMjA2MDl8MA&ixlibrb-4.1.0&q=80&w=1080",
-      "imageHint": "old building"
+      "description": "Соборная мечеть в Майкопе",
+      "imageUrl": "https://images.unsplash.com/photo-1617438464137-a87754e5a363?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNYXlrb3AlMjBtb3NxdWV8ZW58MHx8fHwxNzE5OTU1ODg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "maykop mosque"
     },
     {
       "id": "gallery-4",
-      "description": "Mountains of Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1589332159677-1335414d44bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXVjYXN1cyUyMG1vdW50YWlucyUyMHN1bW1lcnxlbnwwfHx8fDE3NjQyNDIyNzF8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "description": "Летний пейзаж Кавказских гор",
+      "imageUrl": "https://images.unsplash.com/photo-1616413949390-3a4441355b41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXVjYXN1cyUyMG1vdW50YWlucyUyMHN1bW1lcnxlbnwwfHx8fDE3NjQyNDIyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mountains summer"
     },
     {
       "id": "gallery-5",
-      "description": "Adyghe cheese",
-      "imageUrl": "https://images.unsplash.com/photo-1628042413341-426783893918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob21lbWFkZSUyMGNoZWVzZXxlbnwwfHx8fDE3NjQyMzE2NDZ8MA&ixlibrb-4.1.0&q=80&w=1080",
-      "imageHint": "homemade cheese"
+      "description": "Кавказский шашлык на углях",
+      "imageUrl": "https://images.unsplash.com/photo-1593339482999-f01a812c3666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXVjYXNpYW4lMjBiYXJiZWN1ZXxlbnwwfHx8fDE3NjQ3NTAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "caucasian barbecue"
     },
     {
       "id": "gallery-6",
-      "description": "River in Adygea",
-      "imageUrl": "https://images.unsplash.com/photo-1616413949390-3a4441355b41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHJpdmVyJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0Mjc4NTUyfDA&ixlibrb-4.1.0&q=80&w=1080",
+      "description": "Река Белая, протекающая через ущелье",
+      "imageUrl": "https://images.unsplash.com/photo-1616413949390-3a4441355b41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHJpdmVyJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0Mjc4NTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mountain river"
     },
     {
       "id": "gallery-7",
-      "description": "Adyghe traditional costume",
+      "description": "Девушка в традиционном кавказском наряде",
       "imageUrl": "https://images.unsplash.com/photo-1618481351198-a8d86a113333?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGNhdWNhc2lhbiUyMGNsb3RoaW5nfGVufDB8fHx8MTc2NDc0OTc4NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "caucasian clothing"
     },
     {
       "id": "gallery-8",
-      "description": "Foggy forest in Adygea",
+      "description": "Туманный рассвет в горах Адыгеи",
       "imageUrl": "https://images.unsplash.com/photo-1484591942998-1443a69b5133?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2dneSUyMG1vdW50YWluJTIwZm9yZXN0fGVufDB8fHx8MTc2NDc0OTg0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "foggy forest"
     },
     {
       "id": "gallery-9",
-      "description": "Maykop Friendship Monument",
-      "imageUrl": "https://images.unsplash.com/photo-1617438464137-a87754e5a363?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNYXlrb3AlMjBtb251bWVudHxlbnwwfHx8fDE3NjQ3NDk5MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Монумент 'Дружба' в Майкопе",
+      "imageUrl": "https://images.unsplash.com/photo-1698888259423-456094b9f71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb3ZpZXQlMjBtb251bWVudCUyMGNpdHl8ZW58MHx8fHwxNzE5OTU2MTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "city monument"
     },
     {
       "id": "gallery-10",
-      "description": "Shashlik barbecue",
-      "imageUrl": "https://images.unsplash.com/photo-1593339482999-f01a812c3666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXVjYXNpYW4lMjBiYXJiZWN1ZXxlbnwwfHx8fDE3NjQ3NTAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "caucasian barbecue"
+      "description": "Аппетитные хачапури",
+      "imageUrl": "https://images.unsplash.com/photo-1562805403-75e56024a185?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWNoYXB1cml8ZW58MHx8fHwxNzE5OTU2MTkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "khachapuri bread"
     },
     {
       "id": "gallery-11",
-      "description": "Mountain lake",
-      "imageUrl": "https://images.unsplash.com/photo-1508224676902-4382ec3245fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxha2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQ3NTAwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mountain lake"
+      "description": "Стадо лошадей на альпийском лугу",
+      "imageUrl": "https://images.unsplash.com/photo-1598756158315-38e55c7a36f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3JzZXMlMjBpbiUyMG1vdW50YWluc3xlbnwwfHx8fDE3MTk5NTYyMjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "horses mountains"
     },
     {
       "id": "gallery-12",
-      "description": "Adyghe dance",
-      "imageUrl": "https://images.unsplash.com/photo-1582983190825-f9393a45c714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGRhbmNlJTIwY2F1Y2FzdXN8ZW58MHx8fHwxNzY0NzUwMDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "traditional dance"
+      "description": "Пара, танцующая лезгинку",
+      "imageUrl": "https://images.unsplash.com/photo-1533109721025-d1ae7ee7144f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2xrJTIwZGFuY2UlMjBjYXVjYXN1c3xlbnwwfHx8fDE3NjQyNzg1NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "folk dance"
     },
     {
       "id": "entertainment-rafting",
-      "description": "Rafting on a mountain river",
+      "description": "Рафтинг на горной реке",
       "imageUrl": "https://images.unsplash.com/photo-1583295448337-285c57849646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWZ0aW5nJTIwbW91bnRhaW5zJTIwcml2ZXJ8ZW58MHx8fHwxNzY0NzQ5Mjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "rafting mountains"
     },
     {
       "id": "entertainment-canyoning",
-      "description": "Canyoning adventure in a gorge",
+      "description": "Каньонинг в живописном ущелье",
       "imageUrl": "https://images.unsplash.com/photo-1593414923133-144eba2f65a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
       "imageHint": "canyoning gorge"
     },
     {
       "id": "entertainment-horse-riding",
-      "description": "Horse riding in the mountains",
-      "imageUrl": "https://images.unsplash.com/photo-1598756158315-38e55c7a36f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3JzZSUyMHJpZGluZyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjQ3NDkyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "horse riding"
+      "description": "Конная прогулка по горным тропам",
+      "imageUrl": "https://images.unsplash.com/photo-1599008633841-94625b59ff7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3JzZSUyMHJpZGluZyUyMG1vdW50YWluJTIwdHJhaWx8ZW58MHx8fHwxNzE5OTU2MzcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "horseback trail"
     }
   ]
 }
