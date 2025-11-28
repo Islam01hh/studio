@@ -57,6 +57,14 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  const openGalleryModal = (images: ImagePlaceholder[], startIndex: number) => {
+    setGalleryImages(images);
+    setGalleryStartIndex(startIndex);
+    setIsGalleryModalOpen(true);
+  };
+  
+  const allGalleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
+
   return (
     <>
       <Loader loading={loading} />
@@ -76,12 +84,10 @@ export default function Home() {
             <RoutesSection onBook={handleBooking}/>
             <HotelsSection onBook={handleBooking} />
             <GallerySection onImageClick={(id) => {
-              const galleryItemsData = [
-                { id: 'gallery-1', category: 'nature' }, { id: 'gallery-2', category: 'culture' }, { id: 'gallery-3', category: 'architecture' }, { id: 'gallery-4', category: 'nature' }, { id: 'gallery-5', category: 'food' }, { id: 'gallery-6', category: 'nature' }, { id: 'gallery-7', category: 'culture' }, { id: 'gallery-8', category: 'nature' }, { id: 'gallery-9', category: 'architecture' }, { id: 'gallery-10', category: 'food' }, { id: 'gallery-11', category: 'nature' }, { id: 'gallery-12', category: 'culture' },
-              ];
-              const images = galleryItemsData.map(item => PlaceHolderImages.find(p => p.id === item.id)).filter(Boolean) as ImagePlaceholder[];
-              const index = images.findIndex(img => img.id === id);
-              handleGalleryOpen(images, index >= 0 ? index : 0);
+                const imageIndex = allGalleryImages.findIndex(img => img.id === id);
+                if (imageIndex !== -1) {
+                    openGalleryModal(allGalleryImages, imageIndex);
+                }
             }}/>
             <WeatherWidget />
             <ContactSection />
@@ -89,17 +95,8 @@ export default function Home() {
         </main>
         <Footer />
         <ScrollToTop />
-        <BookingModal 
-          isOpen={isBookingModalOpen}
-          setIsOpen={setIsBookingModalOpen}
-          bookingInfo={bookingInfo}
-        />
-        <GalleryModal 
-          isOpen={isGalleryModalOpen} 
-          setIsOpen={setIsGalleryModalOpen}
-          images={galleryImages}
-          startIndex={galleryStartIndex}
-        />
+        <BookingModal isOpen={isBookingModalOpen} setIsOpen={setIsBookingModalOpen} bookingInfo={bookingInfo} />
+        <GalleryModal isOpen={isGalleryModalOpen} setIsOpen={setIsGalleryModalOpen} images={galleryImages} startIndex={galleryStartIndex} />
       </div>
     </>
   );
