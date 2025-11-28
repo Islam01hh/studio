@@ -173,18 +173,19 @@ export default function RoutesSection({ onBook }: RoutesSectionProps) {
 function RoutesGrid({ routes, onBook }: { routes: typeof routesData.hiking, onBook: (info: BookingInfo) => void; }) {
     return (
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {routes.map((route) => {
+            {routes.map((route, index) => {
                 const image = PlaceHolderImages.find(img => img.id === route.id);
                 return (
-                    <AnimateOnScroll key={route.id}>
-                        <div className="bg-background rounded-lg shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl flex flex-col h-full">
-                            <div className="h-56 relative">
+                    <AnimateOnScroll key={route.id} delay={index * 0.1}>
+                        <div className="bg-background rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full">
+                            <div className="h-56 relative overflow-hidden">
                                 {image && (
                                     <Image
                                         src={image.imageUrl}
                                         alt={image.description}
                                         fill
-                                        className="object-cover"
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        sizes="(max-width: 1024px) 50vw, 33vw"
                                         data-ai-hint={image.imageHint}
                                     />
                                 )}
@@ -198,7 +199,7 @@ function RoutesGrid({ routes, onBook }: { routes: typeof routesData.hiking, onBo
                                     <div className="flex items-center"><Ruler className="w-4 h-4 mr-2 text-primary" />{route.distance}</div>
                                     <div className="flex items-center font-semibold"><Wallet className="w-4 h-4 mr-2 text-primary" />{route.price}</div>
                                 </div>
-                                <Button className="mt-auto w-full" onClick={() => onBook({type: 'Маршрут', name: route.title, price: route.price})}>
+                                <Button className="mt-auto w-full transition-transform hover:scale-105" onClick={() => onBook({type: 'Маршрут', name: route.title, price: route.price})}>
                                     Забронировать
                                 </Button>
                             </div>

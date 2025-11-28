@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import AnimateOnScroll from './animate-on-scroll';
-import GalleryModal from './gallery-modal';
 import { cn } from '@/lib/utils';
 import { ZoomIn } from 'lucide-react';
 
@@ -34,11 +33,14 @@ const filters: { value: Filter; label: string }[] = [
   { value: 'food', label: 'Кухня' },
 ];
 
-export default function GallerySection() {
-  const [filter, setFilter] = useState<Filter>('all');
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+type GallerySectionProps = {
+  onImageClick: (id: string) => void;
+};
 
+
+export default function GallerySection({ onImageClick }: GallerySectionProps) {
+  const [filter, setFilter] = useState<Filter>('all');
+  
   const galleryImages = galleryItemsData.map(item => {
       const imageData = PlaceHolderImages.find(p => p.id === item.id);
       return { ...item, ...imageData! };
@@ -48,12 +50,6 @@ export default function GallerySection() {
     filter === 'all'
       ? galleryImages
       : galleryImages.filter((item) => item.category === filter);
-  
-  const handleImageClick = (id: string) => {
-    const fullIndex = galleryImages.findIndex(img => img.id === id);
-    setSelectedIndex(fullIndex);
-    setModalOpen(true);
-  }
 
   return (
     <section id="gallery" className="py-16 md:py-24 bg-card">
@@ -70,7 +66,7 @@ export default function GallerySection() {
                 key={f.value}
                 variant={filter === f.value ? 'default' : 'outline'}
                 onClick={() => setFilter(f.value)}
-                className="rounded-full"
+                className="rounded-full transition-colors duration-300"
               >
                 {f.label}
               </Button>
@@ -82,19 +78,19 @@ export default function GallerySection() {
           {filteredImages.map((item, index) => (
             <AnimateOnScroll key={item.id} delay={index * 0.05} className="aspect-w-1 aspect-h-1">
               <div
-                className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-full w-full"
-                onClick={() => handleImageClick(item.id)}
+                className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer h-full w-full transition-all duration-300 hover:shadow-xl"
+                onClick={() => onImageClick(item.id)}
               >
                 <Image
                   src={item.imageUrl}
                   alt={item.description}
                   fill
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                   data-ai-hint={item.imageHint}
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="w-12 h-12 bg-primary/80 text-white rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary/80 text-white rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
                     <ZoomIn className="w-6 h-6" />
                   </div>
                 </div>
@@ -103,12 +99,6 @@ export default function GallerySection() {
           ))}
         </div>
       </div>
-      <GalleryModal 
-        isOpen={modalOpen} 
-        setIsOpen={setModalOpen}
-        images={galleryImages}
-        startIndex={selectedIndex}
-      />
     </section>
   );
 }

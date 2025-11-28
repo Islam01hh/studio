@@ -73,7 +73,7 @@ export default function HotelsSection({ onBook }: HotelsSectionProps) {
             const image = PlaceHolderImages.find(img => img.id === hotel.id);
             return (
               <AnimateOnScroll key={hotel.id} delay={index * 0.1}>
-                <Card className="flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                   <CardHeader className="p-0 relative h-56">
                     {image && (
                       <Image
@@ -81,6 +81,7 @@ export default function HotelsSection({ onBook }: HotelsSectionProps) {
                         alt={hotel.name}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         data-ai-hint={image.imageHint}
                       />
                     )}
@@ -94,7 +95,7 @@ export default function HotelsSection({ onBook }: HotelsSectionProps) {
                     <p className="text-muted-foreground text-sm mb-4 flex-grow">{hotel.description}</p>
                     <div className="flex justify-between items-center text-sm mb-4">
                         <div className="flex items-center gap-1">
-                            <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                            <Star className="w-5 h-5 text-yellow-400 fill-current" />
                             <span className="font-bold">{hotel.rating}</span>
                         </div>
                         <div className="flex gap-2">
@@ -107,7 +108,7 @@ export default function HotelsSection({ onBook }: HotelsSectionProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
-                    <Button className="w-full" onClick={() => onBook({type: 'Отель', name: hotel.name, price: hotel.price})}>Забронировать</Button>
+                    <Button className="w-full transition-transform hover:scale-105" onClick={() => onBook({type: 'Отель', name: hotel.name, price: hotel.price})}>Забронировать</Button>
                   </CardFooter>
                 </Card>
               </AnimateOnScroll>

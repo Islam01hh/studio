@@ -62,11 +62,11 @@ export default function CultureSection() {
             {cultureItems.map((item, index) => (
               <AnimateOnScroll key={index} delay={index * 0.1}>
                 <Card 
-                  className="text-center h-full transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer flex flex-col"
+                  className="text-center h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer flex flex-col"
                   onClick={() => openModal(item)}
                 >
                   <CardHeader>
-                    <div className="mx-auto w-16 h-16 mb-4 bg-primary text-primary-foreground rounded-full flex items-center justify-center">
+                    <div className="mx-auto w-16 h-16 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                       <item.icon className="w-8 h-8" />
                     </div>
                     <CardTitle className="font-headline text-xl text-primary">{item.title}</CardTitle>
@@ -90,7 +90,7 @@ export default function CultureSection() {
               </DialogHeader>
               <div className="grid md:grid-cols-2 gap-6 mt-4">
                 {selectedItem.image && (
-                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                  <div className="relative aspect-square rounded-lg overflow-hidden shadow-md">
                     <Image
                       src={selectedItem.image.imageUrl}
                       alt={selectedItem.image.description}
@@ -100,7 +100,7 @@ export default function CultureSection() {
                     />
                   </div>
                 )}
-                <div className="flex flex-col justify-center">
+                <div className={`flex flex-col justify-center ${!selectedItem.image ? 'md:col-span-2' : ''}`}>
                   <DialogDescription className="text-base leading-relaxed text-foreground">
                     {selectedItem.description}
                   </DialogDescription>
