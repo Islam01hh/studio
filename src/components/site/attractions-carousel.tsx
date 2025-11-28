@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { attractions, Attraction } from '@/data/attractions';
-import { ImagePlaceholder } from '@/lib/placeholder-images';
 import AnimateOnScroll from './animate-on-scroll';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import Image from 'next/image';
@@ -17,7 +16,7 @@ import {
 } from "@/components/ui/carousel"
 
 type AttractionsCarouselProps = {
-  onGalleryOpen: (images: ImagePlaceholder[], startIndex: number) => void;
+  onGalleryOpen: (startIndex: number) => void;
 };
 
 export default function AttractionsCarousel({ onGalleryOpen }: AttractionsCarouselProps) {
@@ -25,6 +24,15 @@ export default function AttractionsCarousel({ onGalleryOpen }: AttractionsCarous
 
     const openModal = (attraction: Attraction) => {
         setSelectedAttraction(attraction);
+    }
+    
+    const handleCardClick = (attraction: Attraction) => {
+        const imageIndex = attractions.findIndex(a => a.id === attraction.id);
+        if (attraction.image && imageIndex !== -1) {
+            onGalleryOpen(imageIndex);
+        } else {
+            openModal(attraction);
+        }
     }
 
   return (
@@ -50,7 +58,7 @@ export default function AttractionsCarousel({ onGalleryOpen }: AttractionsCarous
             {attractions.map((attraction, index) => (
               <CarouselItem key={attraction.id} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                  <AnimateOnScroll className="h-full" delay={index * 0.05}>
-                  <AttractionCard attraction={attraction} onOpenModal={openModal} className="h-full"/>
+                  <AttractionCard attraction={attraction} onOpenModal={() => handleCardClick(attraction)} className="h-full"/>
                  </AnimateOnScroll>
               </CarouselItem>
             ))}

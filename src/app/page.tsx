@@ -15,6 +15,9 @@ import RoutesCarousel from '@/components/site/routes-carousel';
 import HotelsCarousel from '@/components/site/hotels-carousel';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { attractions } from '@/data/attractions';
+import { routesData } from '@/data/routes';
+import { hotels } from '@/data/hotels';
 
 export type BookingInfo = {
   type: 'Маршрут' | 'Отель';
@@ -49,6 +52,8 @@ export default function Home() {
     }, 1500); 
     return () => clearTimeout(timer);
   }, []);
+  
+  const allAttractionImages = attractions.map(attr => attr.image).filter((img): img is ImagePlaceholder => !!img);
 
   return (
     <>
@@ -61,7 +66,7 @@ export default function Home() {
         <main className="overflow-x-hidden bg-background">
           <HeroSection />
           <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24 md:space-y-32">
-            <AttractionsCarousel onGalleryOpen={openGalleryModal} />
+            <AttractionsCarousel onGalleryOpen={(startIndex) => openGalleryModal(allAttractionImages, startIndex)} />
             <div className="text-center">
                 <Button asChild size="lg">
                     <Link href="/attractions">Смотреть все достопримечательности</Link>
